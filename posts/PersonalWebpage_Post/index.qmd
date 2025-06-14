@@ -1,0 +1,75 @@
+---
+title: "Personal Webpage"
+subtitle: |
+  Building a fully custom <mark>Quarto</mark> × <mark>HTML</mark> × <mark>CSS</mark> × <mark>JavaScript</mark> portfolio
+author: "Raameen Ahmed"
+date: "2025-06-14"
+categories: [RStudio, Front-End]
+---
+
+::: {.content-card}
+
+> **“This site is only the beginning, stay tuned for what's next!”**  
+>
+> In Summer 2025 I decided to challenge site-building AIs and build my own  
+> website. Although users these days primarily rely on tools such as WordPress  
+> to create their websites, I wanted to get in on some of the fun and  
+> try making it myself (with the help of YouTube, ChatGPT, and Gemini).  
+> Below is the stack, the lessons, and what else is in store.
+
+:::
+
+---
+
+## ♡ Why roll my own site?
+
+::: {.content-card}
+
+* Showcase **front-end skills** (not just content).  
+  Hiring managers can view the source and see real code, not Wix widgets.
+
+* End-to-end control over performance, accessibility & design.  
+  I choose the fonts, colours, and load-time budget.
+
+* <mark>Quarto</mark>’s Markdown → <mark>HTML</mark> pipeline lets me write posts in plain text,  
+  **render once** and host anywhere (GitHub Pages today, Netlify tomorrow).
+
+:::
+
+---
+
+## ♡ Tech stack
+
+::: {.content-card}
+
+| Layer | Choices & Rationale |
+|-------|--------------------|
+| **Site generator** | <mark>quarto</mark> 0.9 › renders posts, listing, search |
+| **Styling** | **Tailored <mark>CSS</mark>** — glass-morphism cards, pink hover glows, three-layer banner |
+| **Interactivity** | Vanilla **<mark>JavaScript</mark>** (≈ 140 LoC)<br>• word-hover script <br>• cursor spotlight <br>• image lightbox |
+| **Assets** | All images converted to **WebP** with *<mark>ImageMagick</mark>* (**<mark>magick</mark>**) and capped at 1600 px |
+| **Dev tools** | <mark>RStudio</mark> for QMD editing • VS Code for CSS/JS • Homebrew on macOS |
+| **Hosting** | GitHub Pages (**<mark>gh-pages</mark>** branch) |
+
+:::
+
+---
+
+## ♡ Features
+
+::: {.content-card}
+
+* **Animated banner** — three translucent layers + radial spotlight that tracks  
+  the cursor.
+
+* **Word-by-word hover** — page headers and paragraphs bloom with a soft glow.
+
+* **Glass cards** — posts and call-outs float above the background, zooming &  
+  tinting pink on hover.
+
+* **Lightbox avatar** — click my profile photo to view a full-size version,  
+  dismiss with one click.
+
+* **Instant search** — Algolia Autocomplete powered, loads only on demand.
+
+:::

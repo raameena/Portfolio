@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: "docs"
+
+website:
+  title: "Raameen Ahmed"
+  navbar:
+    left:
+      - text: "Projects"
+        file: projects.qmd
+      - text: "CV"
+        file: cv.qmd
+    right:
+      - icon: github
+        href: https://github.com/raameena
+        target: _blank
+      - icon: envelope
+        href: "https://mail.google.com/mail/?view=cm&to=raameenahmed1@gmail.com"
+        target: _blank
+      - icon: linkedin
+        href: https://www.linkedin.com/in/raameena/
+        target: _blank
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+

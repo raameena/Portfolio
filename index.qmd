@@ -1,0 +1,33 @@
+---
+title: "Raameen Ahmed"
+image: profPic.jpg
+format:
+  html:
+    css: index-style.css
+    include-after-body:
+      - text: |
+          <script src="hover-text.js"></script>
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/raameena
+      target: _blank
+    - icon: envelope
+      text: Email
+      href: "https://mail.google.com/mail/?view=cm&to=raameenahmed1@gmail.com"
+      target: _blank
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/raameena/
+      target: _blank
+---
+
+::: {.content-card}
+::: {.js-hover-effect}
+
+Hello there! My name is Raameen and I am a Data Science at the University of Michigan - Dearborn. I am currently learning to use Quarto, CSS, JavaScript, and HTML through R studio to build the front end to my personal website. Make sure to check out my Projects page! ♡
+
+:::
+::: 

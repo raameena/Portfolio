@@ -1,0 +1,110 @@
+---
+title: "Birth Data Analysis"
+subtitle: |
+  Building an <mark>R</mark> × <mark>tidyverse</mark> × <mark>ggplot2</mark> pipeline to model U.S. births (2016 – 2021)
+author: "Raameen Ahmed, Muskan Ahmad, Malik Mustafa"
+date: "2025-04-10"
+categories: [Data Analysis, Data Modeling]
+---
+
+::: {.content-card}
+
+> **How maternal education shapes fertility patterns and infant health across the United States (2016 – 2021).**  
+>
+> We stitched together **6 years of provisional NCHS records** (≈ 20 M births), cleaned 1.2 GB of raw CSVs into a single tidy table, and fed it through a fully reproducible <mark>R</mark> × <mark>tidyverse</mark> workflow. The result is an interactive report that quantifies regional disparities, isolates key predictors, and pin-points policy levers for healthier outcomes.
+
+:::
+---
+
+## ♡ Research questions
+
+::: {.content-card}
+
+1. **Education → birth outcomes**  
+   How does maternal schooling predict birth weight and maternal age across
+   states and years?
+
+2. **Education → family size**  
+   Are mothers with lower formal education more likely to have multiple
+   children than highly-educated mothers?
+
+:::
+
+---
+
+## ♡ Code & data
+
+::: {.content-card}
+::: {.js-hover-effect}
+
+[GitHub Repository](https://github.com/raameena/Birth-Data-Analysis){target="_blank"}  
+[Kaggle dataset](https://www.kaggle.com/datasets/danbraswell/temporary-us-births){target="_blank"}
+
+:::
+:::
+
+---
+
+## ♡ Functions & methods
+
+::: {.content-card}
+
+| Stage | Key tools & notes |
+|-------|-------------------|
+| **Cleaning / prep** | <mark>readr::read_csv()</mark> · <mark>dplyr::mutate()</mark> / <mark>as_tibble()</mark> · <mark>na.omit()</mark> |
+| **Descriptive stats** | <mark>group_by()</mark> + <mark>summarise()</mark> for year-by-state aggregates |
+| **Inferential stats** | One-way <mark>ANOVA</mark> (<mark>aov</mark>) + linear / interaction models (<mark>lm</mark>) |
+| **Classification** | Logistic <mark>glm</mark> predicting **High_EDU** (Bachelor’s +) from age & birth-weight |
+| **Visualisation** | <mark>ggplot2</mark> bar / violin / scatter + <mark>facet_wrap()</mark> and <mark>geom_text_repel()</mark> |
+
+:::
+
+---
+
+## ♡ Headline findings
+
+::: {.content-card}
+
+* **Education inversely tracks fertility.**  
+  High-school-only and *some college* mothers account for most births, while
+  PhD / MD holders delay childbirth and have fewer children overall.
+
+* **Higher education ⇒ healthier babies.**  
+  Each jump in schooling adds ≈ **85 g** to mean birth weight (*p* < 0.001).
+
+* **Age amplifies the effect.**  
+  In the interaction model, every extra year of maternal age adds **+41 g**
+  for PhD mothers but only **+1 g** for high-school drop-outs.
+
+* **Regional split.**  
+  New England & the West host the most college-educated, older mothers; the
+  Deep South clusters at younger ages & lower schooling.
+
+:::
+
+---
+
+## ♡ Policy take-aways
+
+::: {.content-card}
+
+* **Education is a lever.**  
+  Keeping women in school correlates with later, healthier births.
+
+* **Target by geography.**  
+  Southern states stand to gain most from prenatal-care subsidies and
+  health-literacy programmes.
+
+* **Next steps.**  
+  Add paternal education and local healthcare spend to explain the remaining
+  variance.
+
+:::
+
+---
+
+## ♡ Full report (PDF)
+
+::: {.content-card}
+<iframe src="BirthDataAnalysis.pdf" width="100%" height="600px"></iframe>
+:::

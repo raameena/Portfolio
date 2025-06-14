@@ -1,0 +1,106 @@
+---
+title: "Search System"
+subtitle: |
+  Building a <mark>C++</mark> × <mark>STL</mark> × <mark>CLI</mark> engine  
+  for instant look-ups on all 50 U.S. states
+author: "Raameen Ahmed"
+date: "2024-12-10"
+categories: [Algorithms, Command-Line]
+---
+
+::: {.content-card}
+
+> **How do you find any fact about any state in one keystroke?**  
+>
+> My very first <mark>C++</mark> project: a lightweight, terminal-based search
+> system that parses a 50-row CSV, indexes every field in memory, and serves
+> <mark>O(log n)</mark> look-ups via binary search.
+
+:::
+
+---
+
+## ♡ What problem does it solve?
+
+::: {.content-card}
+
+* **Centralises state facts.**  
+  No more scrolling through Wikipedia tables — query *statehood year*,
+  *capital*, *area* or *abbreviation* from one prompt.
+
+* **Teaches core CS.**  
+  Hands-on practice with file-I/O, structs, vectors, sorting & searching
+  algorithms.
+
+* **Runs everywhere.**  
+  Pure <mark>C++17</mark>, single executable, < 100 KB binary.
+
+:::
+
+---
+
+## ♡ Tech stack
+
+::: {.content-card}
+
+| Layer            | Tools & Notes                                                                          |
+|------------------|----------------------------------------------------------------------------------------|
+| **Language**     | <mark>C++17</mark> — modern features (<mark>auto</mark>, ranged-for, <mark>std::string_view</mark>)           |
+| **Data model**   | <mark>struct State { … }</mark> stored in a <mark>std::vector<State></mark>                                  |
+| **Indexing**     | Pre-sorted by key, binary search via <mark>std::lower_bound</mark>                                |
+| **Parsing**      | <mark>std::ifstream</mark> + <mark>getline</mark> + <mark>std::stringstream</mark>                                      |
+| **Build**        | <mark>g++ -O2 search.cpp -o search</mark> (VS Code tasks.json)                                    |
+| **UX**           | Command-line prompts, coloured output with ANSI codes                                  |
+:::
+
+---
+
+## ♡ Key features
+
+::: {.content-card}
+
+1. **Flexible queries** — select any column (name, capital, region, year…)  
+   and retrieve the row in under a millisecond.
+
+2. **Optimised search** — vector sorted at start-up; look-ups use
+   <mark>std::binary_search()</mark> → <mark>O(log n)</mark>.
+
+3. **Graceful fallback** — invalid keys return suggestions  
+   (*Did you mean “MA” ?*).
+
+4. **Scalable design** — swap the CSV to 5 000 rows with zero code changes;  
+   RAM grows linearly.
+
+:::
+
+---
+
+## ♡ Sample session
+
+::: {.content-card}
+
+```text
+$ ./search
+➜  Enter query type [state | capital | abbr | year]: state
+➜  Enter value: Michigan
+──────────────────────────────────────────────
+State:               Michigan (MI)
+Capital:             Lansing
+Statehood (year):    1837
+Region:              Midwest
+Area (sq mi):        96 716
+──────────────────────────────────────────────
+```
+:::
+
+---
+
+## ♡ Code & data
+
+::: {.content-card}
+::: {.js-hover-effect}
+
+[GitHub Repository](https://github.com/raameena/Search-System){target="_blank"}  
+
+:::
+:::

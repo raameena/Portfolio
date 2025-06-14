@@ -1,0 +1,15 @@
+---
+title: "Raameen Ahmed Resume"
+format:
+  html:
+    css: index-style.css
+    include-after-body:
+      - text: |
+          <script src="hover-text.js"></script>
+---
+
+::: {.content-card}
+
+<iframe src="RaameenAhmedResume.pdf" width="100%" height="1000px"></iframe>
+
+:::
