@@ -11,11 +11,7 @@ categories: [RStudio, Front-End]
 
 > **“This site is only the beginning, stay tuned for what's next!”**  
 >
-> In Summer 2025 I decided to challenge site-building AIs and build my own  
-> website. Although users these days primarily rely on tools such as WordPress  
-> to create their websites, I wanted to get in on some of the fun and  
-> try making it myself (with the help of YouTube, ChatGPT, and Gemini).  
-> Below is the stack, the lessons, and what else is in store.
+> In Summer 2025 I decided to challenge site-building AIs and build my own website. Although users these days primarily rely on tools such as WordPress to create their websites, I wanted to get in on some of the fun and try making it myself (with the help of YouTube, ChatGPT, and Gemini). Below is the stack, the lessons, and what else is in store.
 
 :::
 
