@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Raameen Ahmed",
+    "section": "",
+    "text": "Hello there! My name is Raameen and I am a Data Science at the University of Michigan - Dearborn. I am currently learning to use Quarto, CSS, JavaScript, and HTML through R studio to build the front end to my personal website. Make sure to check out my Projects page! ♡"
+  },
+  {
+    "objectID": "posts/BirthDataAnalysis_Post/index.html",
+    "href": "posts/BirthDataAnalysis_Post/index.html",
+    "title": "Birth Data Analysis",
+    "section": "",
+    "text": "How maternal education shapes fertility patterns and infant health across the United States (2016 – 2021).\nWe stitched together 6 years of provisional NCHS records (≈ 20 M births), cleaned 1.2 GB of raw CSVs into a single tidy table, and fed it through a fully reproducible R × tidyverse workflow. The result is an interactive report that quantifies regional disparities, isolates key predictors, and pin-points policy levers for healthier outcomes."
+  },
+  {
+    "objectID": "posts/BirthDataAnalysis_Post/index.html#research-questions",
+    "href": "posts/BirthDataAnalysis_Post/index.html#research-questions",
+    "title": "Birth Data Analysis",
+    "section": "♡ Research questions",
+    "text": "♡ Research questions\n\n\nEducation → birth outcomes\nHow does maternal schooling predict birth weight and maternal age across states and years?\nEducation → family size\nAre mothers with lower formal education more likely to have multiple children than highly-educated mothers?"
+  },
+  {
+    "objectID": "posts/BirthDataAnalysis_Post/index.html#code-data",
+    "href": "posts/BirthDataAnalysis_Post/index.html#code-data",
+    "title": "Birth Data Analysis",
+    "section": "♡ Code & data",
+    "text": "♡ Code & data\n\n\nGitHub Repository\nKaggle dataset"
+  },
+  {
+    "objectID": "posts/BirthDataAnalysis_Post/index.html#functions-methods",
+    "href": "posts/BirthDataAnalysis_Post/index.html#functions-methods",
+    "title": "Birth Data Analysis",
+    "section": "♡ Functions & methods",
+    "text": "♡ Functions & methods\n\n\n\n\n\n\n\n\nStage\nKey tools & notes\n\n\n\n\nCleaning / prep\nreadr::read_csv() · dplyr::mutate() / as_tibble() · na.omit()\n\n\nDescriptive stats\ngroup_by() + summarise() for year-by-state aggregates\n\n\nInferential stats\nOne-way ANOVA (aov) + linear / interaction models (lm)\n\n\nClassification\nLogistic glm predicting High_EDU (Bachelor’s +) from age & birth-weight\n\n\nVisualisation\nggplot2 bar / violin / scatter + facet_wrap() and geom_text_repel()"
+  },
+  {
+    "objectID": "posts/BirthDataAnalysis_Post/index.html#headline-findings",
+    "href": "posts/BirthDataAnalysis_Post/index.html#headline-findings",
+    "title": "Birth Data Analysis",
+    "section": "♡ Headline findings",
+    "text": "♡ Headline findings\n\n\nEducation inversely tracks fertility.\nHigh-school-only and some college mothers account for most births, while PhD / MD holders delay childbirth and have fewer children overall.\nHigher education ⇒ healthier babies.\nEach jump in schooling adds ≈ 85 g to mean birth weight (p &lt; 0.001).\nAge amplifies the effect.\nIn the interaction model, every extra year of maternal age adds +41 g for PhD mothers but only +1 g for high-school drop-outs.\nRegional split.\nNew England & the West host the most college-educated, older mothers; the Deep South clusters at younger ages & lower schooling."
+  },
+  {
+    "objectID": "posts/BirthDataAnalysis_Post/index.html#policy-take-aways",
+    "href": "posts/BirthDataAnalysis_Post/index.html#policy-take-aways",
+    "title": "Birth Data Analysis",
+    "section": "♡ Policy take-aways",
+    "text": "♡ Policy take-aways\n\n\nEducation is a lever.\nKeeping women in school correlates with later, healthier births.\nTarget by geography.\nSouthern states stand to gain most from prenatal-care subsidies and health-literacy programmes.\nNext steps.\nAdd paternal education and local healthcare spend to explain the remaining variance."
+  },
+  {
+    "objectID": "posts/BirthDataAnalysis_Post/index.html#full-report-pdf",
+    "href": "posts/BirthDataAnalysis_Post/index.html#full-report-pdf",
+    "title": "Birth Data Analysis",
+    "section": "♡ Full report (PDF)",
+    "text": "♡ Full report (PDF)"
+  },
+  {
+    "objectID": "posts/PersonalWebpage_Post/index.html",
+    "href": "posts/PersonalWebpage_Post/index.html",
+    "title": "Personal Webpage",
+    "section": "",
+    "text": "“This site is only the beginning, stay tuned for what’s next!”\nIn Summer 2025 I decided to challenge site-building AIs and build my own\nwebsite. Although users these days primarily rely on tools such as WordPress\nto create their websites, I wanted to get in on some of the fun and\ntry making it myself (with the help of YouTube, ChatGPT, and Gemini).\nBelow is the stack, the lessons, and what else is in store."
+  },
+  {
+    "objectID": "posts/PersonalWebpage_Post/index.html#why-roll-my-own-site",
+    "href": "posts/PersonalWebpage_Post/index.html#why-roll-my-own-site",
+    "title": "Personal Webpage",
+    "section": "♡ Why roll my own site?",
+    "text": "♡ Why roll my own site?\n\n\nShowcase front-end skills (not just content).\nHiring managers can view the source and see real code, not Wix widgets.\nEnd-to-end control over performance, accessibility & design.\nI choose the fonts, colours, and load-time budget.\nQuarto’s Markdown → HTML pipeline lets me write posts in plain text,\nrender once and host anywhere (GitHub Pages today, Netlify tomorrow)."
+  },
+  {
+    "objectID": "posts/PersonalWebpage_Post/index.html#tech-stack",
+    "href": "posts/PersonalWebpage_Post/index.html#tech-stack",
+    "title": "Personal Webpage",
+    "section": "♡ Tech stack",
+    "text": "♡ Tech stack\n\n\n\n\n\n\n\n\nLayer\nChoices & Rationale\n\n\n\n\nSite generator\nquarto 0.9 › renders posts, listing, search\n\n\nStyling\nTailored CSS — glass-morphism cards, pink hover glows, three-layer banner\n\n\nInteractivity\nVanilla JavaScript (≈ 140 LoC)• word-hover script • cursor spotlight • image lightbox\n\n\nAssets\nAll images converted to WebP with ImageMagick (magick) and capped at 1600 px\n\n\nDev tools\nRStudio for QMD editing • VS Code for CSS/JS • Homebrew on macOS\n\n\nHosting\nGitHub Pages (gh-pages branch)"
+  },
+  {
+    "objectID": "posts/PersonalWebpage_Post/index.html#features",
+    "href": "posts/PersonalWebpage_Post/index.html#features",
+    "title": "Personal Webpage",
+    "section": "♡ Features",
+    "text": "♡ Features\n\n\nAnimated banner — three translucent layers + radial spotlight that tracks\nthe cursor.\nWord-by-word hover — page headers and paragraphs bloom with a soft glow.\nGlass cards — posts and call-outs float above the background, zooming &\ntinting pink on hover.\nLightbox avatar — click my profile photo to view a full-size version,\ndismiss with one click.\nInstant search — Algolia Autocomplete powered, loads only on demand."
+  },
+  {
+    "objectID": "posts/SearchSystem_Post/index.html",
+    "href": "posts/SearchSystem_Post/index.html",
+    "title": "Search System",
+    "section": "",
+    "text": "How do you find any fact about any state in one keystroke?\nMy very first C++ project: a lightweight, terminal-based search system that parses a 50-row CSV, indexes every field in memory, and serves O(log n) look-ups via binary search."
+  },
+  {
+    "objectID": "posts/SearchSystem_Post/index.html#what-problem-does-it-solve",
+    "href": "posts/SearchSystem_Post/index.html#what-problem-does-it-solve",
+    "title": "Search System",
+    "section": "♡ What problem does it solve?",
+    "text": "♡ What problem does it solve?\n\n\nCentralises state facts.\nNo more scrolling through Wikipedia tables — query statehood year, capital, area or abbreviation from one prompt.\nTeaches core CS.\nHands-on practice with file-I/O, structs, vectors, sorting & searching algorithms.\nRuns everywhere.\nPure C++17, single executable, &lt; 100 KB binary."
+  },
+  {
+    "objectID": "posts/SearchSystem_Post/index.html#tech-stack",
+    "href": "posts/SearchSystem_Post/index.html#tech-stack",
+    "title": "Search System",
+    "section": "♡ Tech stack",
+    "text": "♡ Tech stack\n\n\n\n\n\n\n\n\nLayer\nTools & Notes\n\n\n\n\nLanguage\nC++17 — modern features (auto, ranged-for, std::string_view)\n\n\nData model\nstruct State { … } stored in a std::vector\n\n\nIndexing\nPre-sorted by key, binary search via std::lower_bound\n\n\nParsing\nstd::ifstream + getline + std::stringstream\n\n\nBuild\ng++ -O2 search.cpp -o search (VS Code tasks.json)\n\n\nUX\nCommand-line prompts, coloured output with ANSI codes"
+  },
+  {
+    "objectID": "posts/SearchSystem_Post/index.html#key-features",
+    "href": "posts/SearchSystem_Post/index.html#key-features",
+    "title": "Search System",
+    "section": "♡ Key features",
+    "text": "♡ Key features\n\n\nFlexible queries — select any column (name, capital, region, year…)\nand retrieve the row in under a millisecond.\nOptimised search — vector sorted at start-up; look-ups use std::binary_search() → O(log n).\nGraceful fallback — invalid keys return suggestions\n(Did you mean “MA” ?).\nScalable design — swap the CSV to 5 000 rows with zero code changes;\nRAM grows linearly."
+  },
+  {
+    "objectID": "posts/SearchSystem_Post/index.html#sample-session",
+    "href": "posts/SearchSystem_Post/index.html#sample-session",
+    "title": "Search System",
+    "section": "♡ Sample session",
+    "text": "♡ Sample session\n\n$ ./search\n➜  Enter query type [state | capital | abbr | year]: state\n➜  Enter value: Michigan\n──────────────────────────────────────────────\nState:               Michigan (MI)\nCapital:             Lansing\nStatehood (year):    1837\nRegion:              Midwest\nArea (sq mi):        96 716\n──────────────────────────────────────────────"
+  },
+  {
+    "objectID": "posts/SearchSystem_Post/index.html#code-data",
+    "href": "posts/SearchSystem_Post/index.html#code-data",
+    "title": "Search System",
+    "section": "♡ Code & data",
+    "text": "♡ Code & data\n\n\nGitHub Repository"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Personal Webpage\n\n\nBuilding a fully custom Quarto × HTML × CSS × JavaScript portfolio \n\n\n\nRStudio\n\n\nFront-End\n\n\n\n\n\n\n\n\n\nJun 14, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nBirth Data Analysis\n\n\nBuilding an R × tidyverse × ggplot2 pipeline to model U.S. births (2016 – 2021) \n\n\n\nData Analysis\n\n\nData Modeling\n\n\n\n\n\n\n\n\n\nApr 10, 2025\n\n\nRaameen Ahmed, Muskan Ahmad, Malik Mustafa\n\n\n\n\n\n\n\n\n\n\n\n\nSearch System\n\n\nBuilding a C++ × STL × CLI engine for instant look-ups on all 50 U.S. states \n\n\n\nAlgorithms\n\n\nCommand-Line\n\n\n\n\n\n\n\n\n\nDec 10, 2024\n\n\nRaameen Ahmed\n\n\n\n\n\n\nNo matching items"
+  }
+]

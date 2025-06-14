@@ -1,0 +1,539 @@
+/* --------------- index.qmd (HOME) --------------- */
+
+mark {
+  background-color: #D4D4D4; /* Example: A gold color. Change this to your desired highlight color */
+  border-radius: 5px;      /* Example: Rounds the corners by 5 pixels. Adjust as needed. */
+  padding: 0.1em 0.4em;    /* Optional: Adds a little padding around the highlighted text */
+}
+
+body {
+  background-image: url('background2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-color: #f0f0f0;
+}
+
+/* Header: Raameen Ahmed */
+.hover-letter {
+  color: #5C5C5C;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  display: inline-block;
+}
+
+.hover-letter:hover {
+  color: #5C5C5C; /* stay white like nav bar */
+  text-shadow:
+    0 0 9px rgba(255, 255, 255, 1),   /* soft pink glow */
+    0 0 6px rgba(232, 137, 180, 0.9); /* extended pink glow */
+  transform: scale(1.25);            /* slightly smaller than 1.5 for balance */
+  font-weight: bold;
+}
+
+/* Word hover (for paragraph) */
+.hover-word {
+  color: #6B6B6B;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.hover-word:hover {
+  color: ##6B6B6B; /* stay white like nav bar */
+  text-shadow:
+    0 0 9px rgba(255, 255, 255, 1),   /* soft pink glow */
+    0 0 6px rgba(232, 137, 180, 0.9); /* extended pink glow */
+  transform: scale(1.06);            /* slightly smaller than 1.5 for balance */
+  font-weight: bold;
+}
+
+.quarto-title .hover-word:hover,
+p.subtitle.lead .hover-word:hover {
+  font-weight: normal; /* suppress the bold just in the banner */
+}
+
+/* --------------- PROFILE PICTURES -------------- */
+img[src*="profPic.jpg"] {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%; /* optional: makes it circular */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+img[src*="profPic.jpg"]:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 10px 20px rgba(255, 255, 255, 0.6), /* soft black shadow */
+    0 0 20px rgb(214, 96, 145);           /* pink glow */
+}
+
+/* Modal base styles */
+#image-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#image-modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* less dark */
+}
+
+#image-modal-content {
+  position: relative;
+  max-width: 70vw;
+  max-height: 70vh;
+  border-radius: 0px;
+
+  /* START with white shadow */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+
+  transform: scale(0.95);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#image-modal-content:hover {
+  transform: scale(1);
+
+  /* CHANGE to pink glow on hover */
+  box-shadow:
+    0 10px 20px rgba(255, 255, 255, 0.6),   /* soften black */
+    0 0 30px rgba(198, 44, 112, 0.7);       /* pink glow */
+  cursor: zoom-out;
+}
+
+/* -------------- SOCIAL ICONS --------------*/
+
+/* Base icon color for GitHub */
+.about-links a[href*="github.com/raameena"] { color: #5f497a; }
+
+/* Base icon color for Email */
+.about-links a[href*="mail.google.com"]    { color: #6d2f73; }
+
+/* Base icon color for LinkedIn */
+.about-links a[href*="linkedin.com/in/raameena"] { color: #3a4e78; }
+
+/* Hover color for GitHub */
+.about-links a[href*="github.com/raameena"]:hover { color: #aa5dfc; }
+
+/* Hover color for Email */
+.about-links a[href*="mail.google.com"]:hover      { color: #e35bcf; }
+
+/* Hover color for LinkedIn */
+.about-links a[href*="linkedin.com/in/raameena"]:hover { color: #658bdb; }
+
+.about-links a {
+  transition: color 0.3s ease;
+}
+
+/* ----------- NAVIGATION BAR -------------- */
+nav.navbar,
+.navbar {
+  background-color: #5C5C5C !important; /* matches Raameen Ahmed hover pink */
+  border-bottom: 3px solid #B3B3B3;      /* optional: emphasize border */
+}
+
+/* Make all navbar links white */
+nav.navbar a,
+.navbar a,
+.quarto-title a,
+.navbar-brand,
+.navbar-nav > li > a {
+  color: white !important;
+}
+
+/* Optional: bold and glow on hover */
+nav.navbar a:hover,
+.navbar a:hover {
+  color: #ffffff !important; /* keep the text white */
+  text-shadow:
+    0 0 3px rgba(232, 137, 180, 0.7),   /* soft pink glow */
+    0 0 6px rgba(232, 137, 180, 0.6);   /* extended pink glow */
+}
+
+/* Raameen Ahmed */
+.navbar-brand:hover {
+  transform: scale(1.08);
+  transition: transform 0.3s ease;
+}
+
+/* Projects */
+.navbar a[href*="projects"]:hover {
+  transform: scale(1.17);
+  transition: transform 0.3s ease;
+}
+
+/* CV */
+.navbar a[href*="cv"]:hover {
+  transform: scale(1.17);
+  transition: transform 0.3s ease;
+}
+
+/* social icons bigger (home) */
+.about-links a:hover {
+  transform: scale(1.09);
+  transition: transform 0.3s ease;
+  display: inline-block; /* Needed for transform to work on inline elements */
+}
+
+/* social icons bigger (nav) */
+.navbar .navbar-nav .nav-link i {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.navbar .navbar-nav .nav-link:hover i {
+  transform: scale(1.3);
+}
+
+/* Force the search icon SVG to be white */
+.aa-DetachedSearchButtonIcon .aa-SubmitIcon {
+  color: white !important;
+  fill:  white !important;
+}
+
+.aa-DetachedSearchButton:hover .aa-SubmitIcon {
+  filter:
+    drop-shadow(0 0 1px rgba(232, 137, 180, 0.7))
+    drop-shadow(0 0 2px rgba(232, 137, 180, 0.6));
+  color: #ffffff;
+  transition: filter 0.1s ease;
+}
+
+/* ------------------ PROJECT.QMD ------------------ */
+
+/* ------------- POSTS BACKGROUND (GLASSMORPHIC) -------------- */
+.quarto-listing-default,
+.listing-listing,
+div.list {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  overflow: visible !important;
+}
+
+.quarto-post {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 2px rgba(255, 255, 255, 0.2),
+    0 4px 30px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.2s ease;
+}
+
+.quarto-post:hover {
+  background-color: rgba(232, 137, 180, 0.08);
+  transform: scale(1.035);
+  box-shadow:
+    0 0 8px rgba(232, 137, 180, 0.25),
+    0 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+.quarto-listing-default {
+  border-radius: 10px;
+}
+
+.listing-title a {
+  text-decoration: none;
+  transition: text-decoration 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+
+.listing-title a:hover {
+  transform: scale(1.035);
+  text-decoration: underline;
+}
+
+/* ------------- CATEGORIES -------------- */
+
+/* Sidebar category styling */
+div.category {
+  transition: all 0.25s ease;
+  display: block;
+  cursor: pointer;
+}
+
+/* Hover: underline + scale up */
+div.category:hover {
+  text-decoration: underline;
+  font-weight: bold !important;
+}
+
+/* Base category pill styling */
+.listing-category {
+  transition: all 0.25s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: .9px solid rgba(255, 255, 255, .6) !important;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+/* Hover effect: grow + pink */
+.listing-category:hover {
+  transform: scale(1.08);
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 0 4px rgba(255, 255, 255, 0.7)   /* soft pink glow */
+}
+
+/* ─── Post-page category pills (keep grey text, always) ─────── */
+
+/* wrapper keeps your border, scale, shadow, etc. */
+.quarto-category,
+.quarto-categories .category {
+  transition: transform .25s ease;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  background: rgba(255, 255, 255, .30);
+  border: 1.3px solid rgba(255, 255, 255, .8) !important;
+  border-radius: 6px;
+}
+
+/* anchor inside: force Bootstrap-grey in every state */
+.quarto-category > a,
+.quarto-category > a:visited,
+.quarto-category:hover > a,
+.quarto-categories .category > a,
+.quarto-categories .category > a:visited,
+.quarto-categories .category:hover > a {
+  color: #4d4d4d !important;   /* stays grey, never turns white */
+  text-decoration: none;       /* keep the pill look            */
+}
+
+/* hover only adds your grow/bg/shadow */
+.quarto-category:hover,
+.quarto-categories .category:hover {
+  transform: scale(1.06);
+  background: rgba(255, 255, 255, .65);
+  box-shadow: 0 0 6px rgba(255, 255, 255, .7) !important;
+}
+
+/* ------------- BANNER -------------- */
+
+/* -------- Outermost Layer (flat corners) -------- */
+.quarto-title-banner {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  ) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 3rem 2rem;
+  border-radius: 0px;
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* -------- Middle Layer (rounded, semi-transparent) -------- */
+.page-columns.page-full {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03)
+  ) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 0.8px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 0px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* -------- Innermost Box (frosted white card) -------- */
+.quarto-title {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.003),
+    rgba(255, 255, 255, 0.003)
+  ) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 0.8px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 0px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25) !important;
+}
+
+/* --------------- CURSOR GLOW ---------------- */
+
+/* Target the entire banner wrapper */
+#title-block-header {
+  position: relative;
+  overflow: hidden;
+
+  /* CSS vars to hold the mouse coords */
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+/* Create the glow as a ::before so we don’t need an extra <div> */
+#title-block-header::before {
+  content: "";
+  position: absolute;
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    rgba(232, 137, 180, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 0;
+}
+
+/* Show the glow on hover */
+#title-block-header:hover::before { opacity: 1; }
+
+/* make ANY element get the same cursor glow */
+.cursor-glow-target {
+  position: relative; /* needed for correct positioning   */
+  overflow: hidden;   /* hide glow that spills off edges  */
+  --mouse-x: 50%;     /* default centre when not hovering */
+  --mouse-y: 50%;
+}
+
+.cursor-glow-target::before {
+  content: "";
+  position: absolute;
+  left: var(--mouse-x);
+  top:  var(--mouse-y);
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    rgba(232, 137, 180, 0.10) 0%, /* same pink tint */
+    transparent 70%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 0; /* keeps glow under content */
+}
+
+.cursor-glow-target:hover::before { opacity: 1; }
+
+/* -------------------- POSTS ----------------------- */
+
+/* put this in index-style.css  (or a posts-style.css) */
+.page-layout-article .quarto-container { background: transparent !important; }
+
+/* banner (both listing and individual post) is the glow host */
+.quarto-title-banner {
+  position: relative;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+.quarto-title-banner::before {
+  content: "";
+  position: absolute;
+  left: var(--mouse-x);
+  top:  var(--mouse-y);
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(232,137,180,.10) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: opacity .2s ease;
+  z-index: 0;
+}
+
+.quarto-title-banner:hover::before { opacity: 1; }
+
+/* ============================================================
+   CONTENT-CARD inside POSTS (no mouse-tracking)
+   ============================================================ */
+.content-card {
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.20);
+  border-radius:16px;
+  padding:1.25rem 1.5rem;
+  margin:1.5rem 0;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  box-shadow:
+    0 0 2px rgba(255,255,255,.20),
+    0 4px 30px rgba(0,0,0,.10);
+  transition:background-color .3s ease, transform .3s ease, box-shadow .2s ease;
+}
+.content-card:hover {
+  background:rgba(232,137,180,.08);
+  transform:scale(1.03);
+  box-shadow:
+    0 0 8px rgba(232,137,180,.25),
+    0 0 9px rgba(255,255,255,.50);
+}
+
+/* ============================================================
+   FORCE TRANSPARENT ARTICLE BACKGROUND SO CARD SHADOWS SHOW
+   ============================================================ */
+.page-layout-article .quarto-container { background:transparent !important; }
+
+/* ============================================================
+   POST-DESCRIPTION WEIGHT (listing vs. post page)
+   ============================================================ */
+
+/* 1. Ensure description is NORMAL weight in the projects / listing cards */
+/* This targets all content within the listing post's description */
+.quarto-post .listing-description,
+.quarto-post .listing-description * {
+  font-weight: 400 !important; /* Forces normal weight for listing descriptions */
+}
+
+/* 2. Make the main description BOLD on the individual post page */
+/* This targets the specific "Comprehensive analysis..." text. */
+/* It leverages the fact that this is often the p.subtitle.lead or a specifically styled element. */
+/* If your "Comprehensive analysis..." is in the first content-card, this is highly specific. */
+.page-layout-article .content-card:first-child p .hover-word,
+.page-layout-article p.subtitle.lead .hover-word,
+.quarto-title-block .subtitle.lead .hover-word {
+  font-weight: 700 !important; /* Forces bold weight for these spans */
+}
+/* 3. Ensure ALL other text within ALL other content cards on the post page is NORMAL,
+      unless explicitly bolded by Markdown (strong/b) within that card. */
+/* This rule counteracts any unintended bolding from other rules for other content cards. */
+.page-layout-article .content-card p,
+.page-layout-article .content-card h1,
+.page-layout-article .content-card h2,
+.page-layout-article .content-card h3,
+.page-layout-article .content-card li {
+  font-weight: normal !important; /* Set most elements to normal font weight */
+}
+.page-layout-article .content-card blockquote.blockquote {
+  color: #945e75 !important; /* Example: BlueViolet. Change to your desired color */
+}
+/* However, ensure any *explicitly* bolded text (with ** or __) within any content card
+   on the post page *still* gets bolded, overriding the 'normal' rule above. */
+.page-layout-article .content-card strong,
+.page-layout-article .content-card b {
+  font-weight: 700 !important; /* Re-apply bold for explicit bolding */
+}
