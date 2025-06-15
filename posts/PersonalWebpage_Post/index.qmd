@@ -51,6 +51,18 @@ categories: [RStudio, Front-End]
 
 ---
 
+## ♡ Code & data
+
+::: {.content-card}
+::: {.js-hover-effect}
+
+[GitHub Repository](https://github.com/raameena/Portfolio){target="_blank"}  
+
+:::
+:::
+
+---
+
 ## ♡ Features
 
 ::: {.content-card}
