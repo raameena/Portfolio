@@ -84,6 +84,12 @@ document.addEventListener("DOMContentLoaded", function () {
         '.quarto-title-banner, #title-block-header'
     );
     
+    console.log("BANNER SCRIPT: Found target elements:", glowTargets);
+
+    if (glowTargets.length === 0) {
+        console.error("BANNER SCRIPT ERROR: No banner elements found on this page. The CSS selector is likely wrong for this page.");
+    }
+    
     glowTargets.forEach(target => {
         target.addEventListener('mousemove', e => {
             const rect = target.getBoundingClientRect();

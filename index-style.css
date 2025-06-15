@@ -7,7 +7,7 @@ mark {
 }
 
 body {
-  background-image: url('background2.jpg');
+  background-image: url('background2.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -53,13 +53,13 @@ p.subtitle.lead .hover-word:hover {
 }
 
 /* --------------- PROFILE PICTURES -------------- */
-img[src*="profPic.jpg"] {
+img[src*="profPic.webp"] {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 50%; /* optional: makes it circular */
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
 }
 
-img[src*="profPic.jpg"]:hover {
+img[src*="profPic.webp"]:hover {
   transform: scale(1.1);
   box-shadow:
     0 10px 20px rgba(255, 255, 255, 0.6), /* soft black shadow */
