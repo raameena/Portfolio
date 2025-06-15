@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // --- MODAL IMAGE LOGIC ---
-    const profileImg = document.querySelector('img[src*="profPic.jpg"]');
+    const profileImg = document.querySelector('img[src*="profPic.webp"]');
     if (profileImg) {
         const modal = document.createElement("div");
         modal.id = "image-modal";

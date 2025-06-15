@@ -1,6 +1,6 @@
 ---
 title: "Raameen Ahmed"
-image: profPic.jpg
+image: profPic.webp
 format:
   html:
     css: index-style.css
