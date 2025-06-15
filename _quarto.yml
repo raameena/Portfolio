@@ -1,29 +1,27 @@
 project:
   type: website
-  output-dir: "docs"
+  output-dir: docs          # publish folder for GitHub Pages
 
 website:
   title: "Raameen Ahmed"
+
   navbar:
     left:
       - text: "Projects"
-        file: projects.qmd
+        file: projects.qmd   # use file: for internal pages
       - text: "CV"
         file: cv.qmd
     right:
       - icon: github
         href: https://github.com/raameena
-        target: _blank
       - icon: envelope
-        href: "https://mail.google.com/mail/?view=cm&to=raameenahmed1@gmail.com"
-        target: _blank
+        href: mailto:raameenahmed1@gmail.com
       - icon: linkedin
         href: https://www.linkedin.com/in/raameena/
-        target: _blank
+
 format:
   html:
-    theme: cosmo
+    theme:                   # <─ only two lines needed for dark-mode
+      light: cosmo
+      dark:  darkly
     css: styles.css
-
-
-

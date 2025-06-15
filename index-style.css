@@ -537,3 +537,54 @@ div.category:hover {
 .page-layout-article .content-card b {
   font-weight: 700 !important; /* Re-apply bold for explicit bolding */
 }
+
+/* ╔════════════════════════════════════════════════╗
+   ║   SUN / MOON   single-button scheme-toggle     ║
+   ╚════════════════════════════════════════════════╝           */
+
+/* 0 ▸ kill the default little icon */
+.quarto-color-scheme-toggle .bi { display:none !important; }
+
+/* 1 ▸ round button – light scheme baseline */
+.quarto-color-scheme-toggle{
+  --clr-track: #d0d0d0;      /* outline in light        */
+  --clr-glyph: #ffdf5e;      /* sun colour              */
+  width:34px;height:34px;
+  display:inline-flex!important;justify-content:center;align-items:center;
+  border:2px solid var(--clr-track);
+  border-radius:50%;background:transparent;padding:0;margin-left:.3rem;
+  cursor:pointer;transition:border-color .25s,background .25s;
+}
+
+/* 2 ▸ glyph layer  */
+.quarto-color-scheme-toggle::before{
+  content:"☀︎" !important;            /* sun (light)            */
+  font-size:16px;line-height:1;
+  color:var(--clr-glyph);
+  transition:color .25s,transform .25s;
+}
+
+/* ─── DARK overrides (must come **after** the light rule) ─── */
+html[data-bs-theme="dark"] .quarto-color-scheme-toggle{
+  --clr-track:#555;                   /* darker outline         */
+  --clr-glyph:#ffd866;                /* moon colour            */
+  border-color:var(--clr-track);
+}
+
+html[data-bs-theme="dark"] .quarto-color-scheme-toggle::before{
+  content:"🌙" !important;            /* moon                   */
+  color:var(--clr-glyph);
+  transform:rotate(-20deg);
+}
+
+/* 3 ▸ hover / keyboard focus */
+.quarto-color-scheme-toggle:hover,
+.quarto-color-scheme-toggle:focus-visible{
+  background:rgba(255,223,94,.18);
+  box-shadow:0 0 0 3px rgba(255,223,94,.35);
+}
+html[data-bs-theme="dark"] .quarto-color-scheme-toggle:hover,
+html[data-bs-theme="dark"] .quarto-color-scheme-toggle:focus-visible{
+  background:rgba(255,216,102,.18);
+  box-shadow:0 0 0 3px rgba(255,216,102,.45);
+}
