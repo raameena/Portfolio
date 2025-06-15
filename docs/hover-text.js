@@ -79,30 +79,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // --- Banner Glow ---
-    console.log("BANNER SCRIPT: Initializing...");
+        // --- Banner Glow ---
     const glowTargets = document.querySelectorAll(
         '.quarto-title-banner, #title-block-header'
     );
-    console.log("BANNER SCRIPT: Found target elements:", glowTargets);
-
-    if (glowTargets.length === 0) {
-        console.error("BANNER SCRIPT ERROR: No banner elements found on this page. The CSS selector is likely wrong for this page.");
-    }
-
+    
     glowTargets.forEach(target => {
-        console.log("BANNER SCRIPT: Attaching mouse listener to:", target);
         target.addEventListener('mousemove', e => {
             const rect = target.getBoundingClientRect();
             const mouseX = e.clientX - rect.left;
             const mouseY = e.clientY - rect.top;
-            console.log(`LIVE MOUSE POSITION: X = ${mouseX.toFixed(2)}, Y = ${mouseY.toFixed(2)}`);
             target.style.setProperty('--mouse-x', `${mouseX}px`);
             target.style.setProperty('--mouse-y', `${mouseY}px`);
         });
-
+    
         target.addEventListener('mouseleave', () => {
-            console.log("BANNER SCRIPT: Mouse has left the target element.");
             target.style.setProperty('--mouse-x', '50%');
             target.style.setProperty('--mouse-y', '50%');
         });

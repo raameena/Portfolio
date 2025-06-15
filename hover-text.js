@@ -84,8 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
         '.quarto-title-banner, #title-block-header'
     );
     
+    console.log("BANNER SCRIPT: Found target elements:", glowTargets);
+
     if (glowTargets.length === 0) {
-        // Optionally keep this error for production if you want to know if element isn't found
         console.error("BANNER SCRIPT ERROR: No banner elements found on this page. The CSS selector is likely wrong for this page.");
     }
     
