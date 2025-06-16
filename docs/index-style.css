@@ -2,13 +2,29 @@
   GLOBAL UTILITIES
   ────────────────────────────────────────────────────────────*/
 mark{
-  background:#d4d4d4;border-radius:5px;padding:.1em .4em;
+  border-radius:5px;padding:.1em .4em;
 }
 
-/*──────── BACKGROUND IMAGE ────────*/
-body{
-  background:url('background2.webp') center/cover fixed no-repeat;
-  background-color:#f0f0f0;      /* fallback for light; dark scoped below */
+html[data-bs-theme="light"] body {
+  /* A clean, standard light grey. You can change this hex code. */
+  background-image: url('background2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  /* A dark fallback color while the image loads */
+  background-color: #101010; 
+}
+
+/* --- This rule applies ONLY in DARK mode --- */
+html[data-bs-theme="dark"] body {
+  background-image: url('background2.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  /* A dark fallback color while the image loads */
+  background-color: #101010; 
 }
 
 /*─────────────────────────────────────────────────────────────
