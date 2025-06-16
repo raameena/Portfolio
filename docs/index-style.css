@@ -37,62 +37,110 @@ body{
 .quarto-title .hover-word:hover,
 p.subtitle.lead .hover-word:hover{font-weight:normal}
 
+/* ============================================================
+   FINAL NAVBAR LINK STYLING
+   ============================================================ */
 /*─────────────────────────────────────────────────────────────
   NAVBAR  – colour differs by scheme
   ────────────────────────────────────────────────────────────*/
-html[data-bs-theme="light"] nav.navbar{background:#363636!important}
-html[data-bs-theme="dark"]  nav.navbar{background:#aba9aa!important}
+html[data-bs-theme="light"] nav.navbar a:not(#custom-theme-toggle):not(#custom-theme-toggle *),
+html[data-bs-theme="light"] nav.navbar a:not(#custom-theme-toggle):not(#custom-theme-toggle *) .bi {
+  color: #282828 !important;          /* base link + icon colour */
+}
+html[data-bs-theme="dark"] nav.navbar a:not(#custom-theme-toggle):not(#custom-theme-toggle *),
+html[data-bs-theme="dark"] nav.navbar a:not(#custom-theme-toggle):not(#custom-theme-toggle *) .bi {
+  color: #E3E3E3 !important;          /* <—- pick any dark-mode tint */
+}
+html[data-bs-theme="light"] nav.navbar{background:#6b6b6b!important;}
+html[data-bs-theme="dark"]  nav.navbar{background:#aba9aa!important;}
 
-/* Links inherit Bootstrap palette so they flip automatically */
-/* BUG NOT WORKING IT OVERRIDES CUSTOM THEME TOGGLE */
-nav.navbar a.nav-link:not(#custom-theme-toggle):hover,
-.navbar a.nav-link:not(#custom-theme-toggle):hover{
-  text-shadow:0 0 3px rgba(232,137,180,.7),0 0 6px rgba(232,137,180,.6)!important;
+/* LIGHT scheme — blue glow, only the toggle glyph */
+/* LIGHT scheme – glow ONLY on the theme button’s glyph */
+/* LIGHT  → blue glow only on the toggle glyph */
+/* LIGHT scheme – blue glow on the theme glyph only */
+html[data-bs-theme="light"] nav.navbar
+i.bi[aria-label^="Toggle theme"]:hover {
+  display: inline-block;
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 6px rgba(2, 73, 250,1),
+               0 0 9px rgba(131, 169, 230,.6);
 }
 
-/* Brand + menu scaling */
-.navbar-brand:hover,
-.navbar a[href*="projects"]:hover,
-.navbar a[href*="cv"]:hover{
-  transform:scale(1.17);transition:transform .3s;
+/* DARK scheme – yellow-green glow on the same glyph */
+html[data-bs-theme="dark"] nav.navbar
+i.bi[aria-label^="Toggle theme"]:hover {
+  display: inline-block;
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 10px rgba(194, 164, 56.8),
+               0 0 13px rgba(242, 219, 133,.7);
 }
-.navbar-brand:hover{transform:scale(1.08)}
 
-/* Social-icon hover scale */
-.navbar .nav-link i{transition:transform .3s;display:inline-block}
-.navbar .nav-link:hover i{transform:scale(1.3)}
+
+nav.navbar .nav-link[href*="github.com"]:hover i,
+nav.navbar .nav-link[href*="linkedin.com"]:hover i,
+nav.navbar .nav-link[href*="mailto:"]:hover i {
+  transform: scale(1.3);
+  text-shadow: 0 0 3px rgba(232,137,180,.7),
+               0 0 6px rgba(232,137,180,.6) !important;
+}
+
+nav.navbar .nav-link[href*="github.com"]:hover,
+nav.navbar .nav-link[href*="linkedin.com"]:hover,
+nav.navbar .nav-link[href*="mailto:"]:hover {
+  display: inline-block;
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+.navbar a[href*="projects"]:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 3px rgba(232,137,180,.7),
+               0 0 6px rgba(232,137,180,.6) !important;
+}
+/* CV */
+.navbar a[href*="cv"]:hover {
+  transform: scale(1.23);
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 3px rgba(232,137,180,.7),
+               0 0 6px rgba(232,137,180,.6) !important;
+}
+.navbar-brand:hover{
+  transform:scale(1.08);
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 3px rgba(232,137,180,.7),
+               0 0 6px rgba(232,137,180,.6) !important;
+}
 
 /*─────────────────────────────────────────────────────────────
-  THEME-TOGGLE BUTTON   (#custom-theme-toggle)
-  light  = blue moon + blue halo
-  dark   = yellow sun + yellow halo
+  BODY-TEXT tint for everything EXCEPT:
+  · category pills (.listing-category / .quarto-category)
+  · highlight badges  (.badge)
+  · inline <mark> highlights
   ────────────────────────────────────────────────────────────*/
-#custom-theme-toggle{
-  position:relative;width:34px;height:34px;border-radius:50%;
-  display:inline-flex!important;align-items:center;justify-content:center;
-  padding:0;margin-left:.35rem;cursor:pointer;background:transparent;
-  border:2px solid currentColor!important;text-decoration:none!important;
-  transition:box-shadow .25s,background .25s,color .25s;outline:none;
-}
-#custom-theme-toggle .bi{font-size:16px;line-height:1;transition:transform .25s}
-#custom-theme-toggle:hover .bi{transform:scale(1.1)}
+.quarto-post,
+.quarto-post *:not(.listing-category):not(.listing-category *)
+             :not(.quarto-category):not(.quarto-category *)
+             :not(mark),
+.quarto-post .listing-description,
+.quarto-post .listing-author,
+.quarto-post .listing-date,
+.quarto-post .listing-meta,
+.quarto-post .metadata            { color: var(--bs-body-color) !important; }
 
-/* dark scheme → yellow sun */
-html[data-bs-theme="dark"] #custom-theme-toggle{color:#ffdf5e!important}
-html[data-bs-theme="dark"] #custom-theme-toggle:hover,
-html[data-bs-theme="dark"] #custom-theme-toggle:focus-visible{
-  color: blue!important;
-  background:rgba(255,223,94,.18)!important;
-  box-shadow:0 0 0 3px rgba(255,223,94,.45)!important;
+
+/*─────────────────────────────────────────────────────────────
+  <mark>  HIGHLIGHT  – same look in both schemes
+  ────────────────────────────────────────────────────────────*/
+html[data-bs-theme="light"] mark {
+  background: #D2D2D2;          /* soft yellow */
+  color: #212529;               /* dark text for contrast */
 }
 
-/* light scheme → blue moon */
-html[data-bs-theme="light"] #custom-theme-toggle{color:##e889b4!important}
-html[data-bs-theme="light"] #custom-theme-toggle:hover,
-html[data-bs-theme="light"] #custom-theme-toggle:focus-visible{
-  color:yellow!important;
-  background:rgba(58,108,240,.18)!important;
-  box-shadow:0 0 0 3px rgba(58,108,240,.45)!important;
+html[data-bs-theme="dark"]  mark {
+  background: #D2D2D2;          /* deeper yellow so it shows on dark glass */
+  color: #ffffff;
 }
 
 /*─────────────────────────────────────────────────────────────
@@ -180,79 +228,25 @@ html[data-bs-theme="dark"] body{background-color:#101010}
   transition: color 0.3s ease;
 }
 
-/* ----------- NAVIGATION BAR -------------- */
-nav.navbar,
-.navbar {
-  background-color: #5C5C5C !important; /* matches Raameen Ahmed hover pink */
-  border-bottom: 3px solid #B3B3B3;      /* optional: emphasize border */
+.about-links a:hover{
+  transform: scale(1.09);
+  transition: transform 0.4s ease;
 }
+/* ----------- NAVIGATION BAR -------------- */
 
 /* Make all navbar links white */
 /* Make all navbar links white, EXCEPT the theme toggle */
-nav.navbar a:not(.quarto-color-scheme-toggle),
-.navbar a:not(.quarto-color-scheme-toggle),
-.quarto-title a,
-.navbar-brand,
-.navbar-nav > li > a {
-  color: white !important;
-}
-
-/* Optional: bold and glow on hover */
-nav.navbar a:not(.quarto-color-scheme-toggle):hover,
-.navbar a:not(.quarto-color-scheme-toggle):hover {
-  color: #ffffff !important; /* keep the text white */
-  text-shadow:
-    0 0 3px rgba(232, 137, 180, 0.7),
-    0 0 6px rgba(232, 137, 180, 0.6);
-}
-
-/* Raameen Ahmed */
-.navbar-brand:hover {
-  transform: scale(1.08);
-  transition: transform 0.3s ease;
-}
-
-/* Projects */
-.navbar a[href*="projects"]:hover {
-  transform: scale(1.17);
-  transition: transform 0.3s ease;
-}
-
-/* CV */
-.navbar a[href*="cv"]:hover {
-  transform: scale(1.17);
-  transition: transform 0.3s ease;
-}
 
 /* social icons bigger (home) */
-.about-links a:hover {
-  transform: scale(1.09);
-  transition: transform 0.3s ease;
-  display: inline-block; /* Needed for transform to work on inline elements */
-}
-
-/* social icons bigger (nav) */
-.navbar .navbar-nav .nav-link i {
-  transition: transform 0.3s ease;
-  display: inline-block;
-}
-
-.navbar .navbar-nav .nav-link:hover i {
-  transform: scale(1.3);
-}
-
 /* Force the search icon SVG to be white */
-.aa-DetachedSearchButtonIcon .aa-SubmitIcon {
-  color: white !important;
-  fill:  white !important;
-}
 
 .aa-DetachedSearchButton:hover .aa-SubmitIcon {
+  transform: scale(1.11);
   filter:
     drop-shadow(0 0 1px rgba(232, 137, 180, 0.7))
     drop-shadow(0 0 2px rgba(232, 137, 180, 0.6));
   color: #ffffff;
-  transition: filter 0.1s ease;
+  transition: filter 0.1s ease, transform 0.3s ease;
 }
 
 /* ------------------ PROJECT.QMD ------------------ */
@@ -586,63 +580,3 @@ div.category:hover {
   font-weight: 700 !important; /* Re-apply bold for explicit bolding */
 }
 
-/* ============================================================
-   CUSTOM THEME TOGGLE (with old button style)
-   ============================================================ */
-
-/* 1. Style the button to be a round shape */
-/* This is adapted from your old code. */
-#custom-theme-toggle {
-  position: relative;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%; /* This makes it a circle */
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  padding: 0;
-  margin-left: .35rem;
-  cursor: pointer;
-  /* The border will get its color from the rules below */
-  border: 2px solid currentColor !important;
-  transition: box-shadow .25s, background .25s;
-  outline: none;
-  text-decoration: none !important;
-}
-
-/* 2. Set the color for Light Mode */
-/* The border and the icon inside will inherit this blue color. */
-html[data-bs-theme="light"] #custom-theme-toggle {
-  color: #3a6cf0 !important;
-}
-
-/* 3. Set the color for Dark Mode */
-/* The border and the icon inside will inherit this yellow color. */
-html[data-bs-theme="dark"] #custom-theme-toggle {
-  color: #ffdf5e !important;
-}
-
-/* 4. Define the Hover & Focus effects for Light Mode */
-html[data-bs-theme="light"] #custom-theme-toggle:hover,
-html[data-bs-theme="light"] #custom-theme-toggle:focus-visible {
-  background: rgba(58, 108, 240, .18) !important;
-  box-shadow: 0 0 0 3px rgba(58, 108, 240, .45) !important;
-}
-
-/* 5. Define the Hover & Focus effects for Dark Mode */
-html[data-bs-theme="dark"] #custom-theme-toggle:hover,
-html[data-bs-theme="dark"] #custom-theme-toggle:focus-visible {
-  background: rgba(255, 223, 94, .18) !important;
-  box-shadow: 0 0 0 3px rgba(255, 223, 94, .45) !important;
-}
-
-/* 6. A little extra touch for the icon inside */
-#custom-theme-toggle .bi {
-  font-size: 16px;
-  line-height: 1;
-  transition: transform .25s;
-}
-#custom-theme-toggle:hover .bi {
-  transform: scale(1.1);
-}
