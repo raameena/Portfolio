@@ -1,27 +1,48 @@
+# _quarto.yml
+
 project:
   type: website
-  output-dir: docs          # publish folder for GitHub Pages
+  output-dir: "docs"
 
 website:
   title: "Raameen Ahmed"
-
   navbar:
     left:
-      - text: "Projects"
-        file: projects.qmd   # use file: for internal pages
-      - text: "CV"
-        file: cv.qmd
+      - href: projects.qmd
+        text: Projects
+      - href: cv.qmd
+        text: CV
     right:
+      # Item 1: GitHub Icon
       - icon: github
         href: https://github.com/raameena
-      - icon: envelope
-        href: mailto:raameenahmed1@gmail.com
+
+      # Item 2: LinkedIn Icon
       - icon: linkedin
         href: https://www.linkedin.com/in/raameena/
 
+      # Item 3: Email Icon
+      - icon: envelope
+        href: "mailto:raameenahmed1@gmail.com"
+
+      # Item 4: The Search Bar
+
+      # Item 5: Your Custom HTML Button
+      - id: custom-theme-toggle
+        icon: moon 
+        href: "#"
+        aria-label: "Toggle theme"
+          
+  # Use the explicit format for including JavaScript files
+
+# Use the format structure that we know works in your environment
 format:
   html:
-    theme:                   # <─ only two lines needed for dark-mode
-      light: cosmo
-      dark:  darkly
-    css: styles.css
+    theme: cosmo
+    css: 
+    - index-style.css
+    - "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    include-after-body:
+    - text: |
+        <script src="/hover-text.js"></script>
+        <script src="/theme-toggle.js"></script>

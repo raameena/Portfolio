@@ -1,69 +1,110 @@
-/* --------------- index.qmd (HOME) --------------- */
-
-mark {
-  background-color: #D4D4D4; /* Example: A gold color. Change this to your desired highlight color */
-  border-radius: 5px;      /* Example: Rounds the corners by 5 pixels. Adjust as needed. */
-  padding: 0.1em 0.4em;    /* Optional: Adds a little padding around the highlighted text */
+/*─────────────────────────────────────────────────────────────
+  GLOBAL UTILITIES
+  ────────────────────────────────────────────────────────────*/
+mark{
+  background:#d4d4d4;border-radius:5px;padding:.1em .4em;
 }
 
-body {
-  background-image: url('background2.webp');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-color: #f0f0f0;
+/*──────── BACKGROUND IMAGE ────────*/
+body{
+  background:url('background2.webp') center/cover fixed no-repeat;
+  background-color:#f0f0f0;      /* fallback for light; dark scoped below */
 }
 
-/* Header: Raameen Ahmed */
-.hover-letter {
-  color: #5C5C5C;
-  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
-  display: inline-block;
+/*─────────────────────────────────────────────────────────────
+  TYPO/HEADER EFFECTS
+  ────────────────────────────────────────────────────────────*/
+/* TYPO/HEADER EFFECTS */
+.hover-letter, .hover-word{
+  display:inline-block;transition:color .3s,transform .3s,text-shadow .3s;
 }
-
-.hover-letter:hover {
-  color: #5C5C5C; /* stay white like nav bar */
-  text-shadow:
-    0 0 9px rgba(255, 255, 255, 1),   /* soft pink glow */
-    0 0 6px rgba(232, 137, 180, 0.9); /* extended pink glow */
-  transform: scale(1.25);            /* slightly smaller than 1.5 for balance */
-  font-weight: bold;
-}
-
-/* Word hover (for paragraph) */
+/* This now uses the theme's variable for text color */
+.hover-letter,
 .hover-word {
-  color: #6B6B6B;
-  transition: color 0.3s ease, transform 0.3s ease;
-  display: inline-block;
+  color: var(--bs-body-color);
 }
 
-.hover-word:hover {
-  color: ##6B6B6B; /* stay white like nav bar */
-  text-shadow:
-    0 0 9px rgba(255, 255, 255, 1),   /* soft pink glow */
-    0 0 6px rgba(232, 137, 180, 0.9); /* extended pink glow */
-  transform: scale(1.06);            /* slightly smaller than 1.5 for balance */
-  font-weight: bold;
+.hover-letter:hover{
+  font-weight:bold;
+  text-shadow:0 0 9px #fff,0 0 6px rgba(232,137,180,.9);
+  transform:scale(1.25);
 }
-
+.hover-word:hover{
+  font-weight:bold;
+  text-shadow:0 0 9px #fff,0 0 6px rgba(232,137,180,.9);
+  transform:scale(1.06);
+}
 .quarto-title .hover-word:hover,
-p.subtitle.lead .hover-word:hover {
-  font-weight: normal; /* suppress the bold just in the banner */
+p.subtitle.lead .hover-word:hover{font-weight:normal}
+
+/*─────────────────────────────────────────────────────────────
+  NAVBAR  – colour differs by scheme
+  ────────────────────────────────────────────────────────────*/
+html[data-bs-theme="light"] nav.navbar{background:#363636!important}
+html[data-bs-theme="dark"]  nav.navbar{background:#aba9aa!important}
+
+/* Links inherit Bootstrap palette so they flip automatically */
+/* BUG NOT WORKING IT OVERRIDES CUSTOM THEME TOGGLE */
+nav.navbar a.nav-link:not(#custom-theme-toggle):hover,
+.navbar a.nav-link:not(#custom-theme-toggle):hover{
+  text-shadow:0 0 3px rgba(232,137,180,.7),0 0 6px rgba(232,137,180,.6)!important;
 }
 
-/* --------------- PROFILE PICTURES -------------- */
-img[src*="profPic.webp"] {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 50%; /* optional: makes it circular */
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+/* Brand + menu scaling */
+.navbar-brand:hover,
+.navbar a[href*="projects"]:hover,
+.navbar a[href*="cv"]:hover{
+  transform:scale(1.17);transition:transform .3s;
+}
+.navbar-brand:hover{transform:scale(1.08)}
+
+/* Social-icon hover scale */
+.navbar .nav-link i{transition:transform .3s;display:inline-block}
+.navbar .nav-link:hover i{transform:scale(1.3)}
+
+/*─────────────────────────────────────────────────────────────
+  THEME-TOGGLE BUTTON   (#custom-theme-toggle)
+  light  = blue moon + blue halo
+  dark   = yellow sun + yellow halo
+  ────────────────────────────────────────────────────────────*/
+#custom-theme-toggle{
+  position:relative;width:34px;height:34px;border-radius:50%;
+  display:inline-flex!important;align-items:center;justify-content:center;
+  padding:0;margin-left:.35rem;cursor:pointer;background:transparent;
+  border:2px solid currentColor!important;text-decoration:none!important;
+  transition:box-shadow .25s,background .25s,color .25s;outline:none;
+}
+#custom-theme-toggle .bi{font-size:16px;line-height:1;transition:transform .25s}
+#custom-theme-toggle:hover .bi{transform:scale(1.1)}
+
+/* dark scheme → yellow sun */
+html[data-bs-theme="dark"] #custom-theme-toggle{color:#ffdf5e!important}
+html[data-bs-theme="dark"] #custom-theme-toggle:hover,
+html[data-bs-theme="dark"] #custom-theme-toggle:focus-visible{
+  color: blue!important;
+  background:rgba(255,223,94,.18)!important;
+  box-shadow:0 0 0 3px rgba(255,223,94,.45)!important;
 }
 
-img[src*="profPic.webp"]:hover {
-  transform: scale(1.1);
-  box-shadow:
-    0 10px 20px rgba(255, 255, 255, 0.6), /* soft black shadow */
-    0 0 20px rgb(214, 96, 145);           /* pink glow */
+/* light scheme → blue moon */
+html[data-bs-theme="light"] #custom-theme-toggle{color:##e889b4!important}
+html[data-bs-theme="light"] #custom-theme-toggle:hover,
+html[data-bs-theme="light"] #custom-theme-toggle:focus-visible{
+  color:yellow!important;
+  background:rgba(58,108,240,.18)!important;
+  box-shadow:0 0 0 3px rgba(58,108,240,.45)!important;
+}
+
+/*─────────────────────────────────────────────────────────────
+  IMAGES  /  MODAL
+  ────────────────────────────────────────────────────────────*/
+img[src*="profPic.webp"]{
+  border-radius:50%;transition:transform .3s,box-shadow .3s;
+  box-shadow:0 10px 20px rgba(255,255,255,.3);
+}
+img[src*="profPic.webp"]:hover{
+  transform:scale(1.1);
+  box-shadow:0 10px 20px rgba(255,255,255,.6),0 0 20px rgb(214,96,145);
 }
 
 /* Modal base styles */
@@ -109,6 +150,12 @@ img[src*="profPic.webp"]:hover {
   cursor: zoom-out;
 }
 
+/*─────────────────────────────────────────────────────────────
+  BODY BG fallback per scheme
+  ────────────────────────────────────────────────────────────*/
+html[data-bs-theme="dark"] body{background-color:#101010}
+
+
 /* -------------- SOCIAL ICONS --------------*/
 
 /* Base icon color for GitHub */
@@ -141,8 +188,9 @@ nav.navbar,
 }
 
 /* Make all navbar links white */
-nav.navbar a,
-.navbar a,
+/* Make all navbar links white, EXCEPT the theme toggle */
+nav.navbar a:not(.quarto-color-scheme-toggle),
+.navbar a:not(.quarto-color-scheme-toggle),
 .quarto-title a,
 .navbar-brand,
 .navbar-nav > li > a {
@@ -150,12 +198,12 @@ nav.navbar a,
 }
 
 /* Optional: bold and glow on hover */
-nav.navbar a:hover,
-.navbar a:hover {
+nav.navbar a:not(.quarto-color-scheme-toggle):hover,
+.navbar a:not(.quarto-color-scheme-toggle):hover {
   color: #ffffff !important; /* keep the text white */
   text-shadow:
-    0 0 3px rgba(232, 137, 180, 0.7),   /* soft pink glow */
-    0 0 6px rgba(232, 137, 180, 0.6);   /* extended pink glow */
+    0 0 3px rgba(232, 137, 180, 0.7),
+    0 0 6px rgba(232, 137, 180, 0.6);
 }
 
 /* Raameen Ahmed */
@@ -538,53 +586,63 @@ div.category:hover {
   font-weight: 700 !important; /* Re-apply bold for explicit bolding */
 }
 
-/* ╔════════════════════════════════════════════════╗
-   ║   SUN / MOON   single-button scheme-toggle     ║
-   ╚════════════════════════════════════════════════╝           */
+/* ============================================================
+   CUSTOM THEME TOGGLE (with old button style)
+   ============================================================ */
 
-/* 0 ▸ kill the default little icon */
-.quarto-color-scheme-toggle .bi { display:none !important; }
-
-/* 1 ▸ round button – light scheme baseline */
-.quarto-color-scheme-toggle{
-  --clr-track: #d0d0d0;      /* outline in light        */
-  --clr-glyph: #ffdf5e;      /* sun colour              */
-  width:34px;height:34px;
-  display:inline-flex!important;justify-content:center;align-items:center;
-  border:2px solid var(--clr-track);
-  border-radius:50%;background:transparent;padding:0;margin-left:.3rem;
-  cursor:pointer;transition:border-color .25s,background .25s;
+/* 1. Style the button to be a round shape */
+/* This is adapted from your old code. */
+#custom-theme-toggle {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%; /* This makes it a circle */
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0;
+  margin-left: .35rem;
+  cursor: pointer;
+  /* The border will get its color from the rules below */
+  border: 2px solid currentColor !important;
+  transition: box-shadow .25s, background .25s;
+  outline: none;
+  text-decoration: none !important;
 }
 
-/* 2 ▸ glyph layer  */
-.quarto-color-scheme-toggle::before{
-  content:"☀︎" !important;            /* sun (light)            */
-  font-size:16px;line-height:1;
-  color:var(--clr-glyph);
-  transition:color .25s,transform .25s;
+/* 2. Set the color for Light Mode */
+/* The border and the icon inside will inherit this blue color. */
+html[data-bs-theme="light"] #custom-theme-toggle {
+  color: #3a6cf0 !important;
 }
 
-/* ─── DARK overrides (must come **after** the light rule) ─── */
-html[data-bs-theme="dark"] .quarto-color-scheme-toggle{
-  --clr-track:#555;                   /* darker outline         */
-  --clr-glyph:#ffd866;                /* moon colour            */
-  border-color:var(--clr-track);
+/* 3. Set the color for Dark Mode */
+/* The border and the icon inside will inherit this yellow color. */
+html[data-bs-theme="dark"] #custom-theme-toggle {
+  color: #ffdf5e !important;
 }
 
-html[data-bs-theme="dark"] .quarto-color-scheme-toggle::before{
-  content:"🌙" !important;            /* moon                   */
-  color:var(--clr-glyph);
-  transform:rotate(-20deg);
+/* 4. Define the Hover & Focus effects for Light Mode */
+html[data-bs-theme="light"] #custom-theme-toggle:hover,
+html[data-bs-theme="light"] #custom-theme-toggle:focus-visible {
+  background: rgba(58, 108, 240, .18) !important;
+  box-shadow: 0 0 0 3px rgba(58, 108, 240, .45) !important;
 }
 
-/* 3 ▸ hover / keyboard focus */
-.quarto-color-scheme-toggle:hover,
-.quarto-color-scheme-toggle:focus-visible{
-  background:rgba(255,223,94,.18);
-  box-shadow:0 0 0 3px rgba(255,223,94,.35);
+/* 5. Define the Hover & Focus effects for Dark Mode */
+html[data-bs-theme="dark"] #custom-theme-toggle:hover,
+html[data-bs-theme="dark"] #custom-theme-toggle:focus-visible {
+  background: rgba(255, 223, 94, .18) !important;
+  box-shadow: 0 0 0 3px rgba(255, 223, 94, .45) !important;
 }
-html[data-bs-theme="dark"] .quarto-color-scheme-toggle:hover,
-html[data-bs-theme="dark"] .quarto-color-scheme-toggle:focus-visible{
-  background:rgba(255,216,102,.18);
-  box-shadow:0 0 0 3px rgba(255,216,102,.45);
+
+/* 6. A little extra touch for the icon inside */
+#custom-theme-toggle .bi {
+  font-size: 16px;
+  line-height: 1;
+  transition: transform .25s;
+}
+#custom-theme-toggle:hover .bi {
+  transform: scale(1.1);
 }
