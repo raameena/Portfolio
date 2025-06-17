@@ -186,38 +186,50 @@ html[data-bs-theme="dark"] .listing-date *{
 ═════════════════════════════════════════════════════════════*/
 /*   targets .quarto-title  → appears only on full post page   */
 
-/* ── LIGHT theme ──────────────────────────────────────────── */
+/* ── DARK MODE ──────────────────────────────────────────── */
 html[data-bs-theme="light"] .quarto-title .quarto-category {
-  background:   #FFE5F4;        /* pill body  */
-  border-color: #FFB8E8;        /* pill edge  */
-  color:        #C71585 !important;   /* text  */
-}
-html[data-bs-theme="light"] .quarto-title .quarto-category a {
-  color: #C71585 !important;          /* link inside pill */
+  background:   #A06084;
+  border: 1px solid rgba(0, 0, 0, .8) !important;
   font-weight: bold!important;
-  background:   #ffffff;
-  border-color: #C71585!important;
-  border: 1px solid rgba(255, 255, 255, .8) !important;
+}
+html[data-bs-theme="light"]  .quarto-title .quarto-category a {
+  color: #1F1F1F !important;
+  /* #FFB3DA */
+}
+html[data-bs-theme="light"]  .quarto-title .quarto-category:hover a {
+  color: #A06084 !important;
+  /* #FFB3DA */
+}
+html[data-bs-theme="light"] .quarto-category:hover,
+.quarto-categories .category:hover {
+  transform: scale(1.06);
+  background: rgba(0, 0, 0, .65) !important;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .7) !important;
+  transition: transform 0.2s ease;
 }
 
-/* ── DARK theme ───────────────────────────────────────────── */
+/* ── LIGHT MODE ───────────────────────────────────────────── */
 html[data-bs-theme="dark"]  .quarto-title .quarto-category {
-  background:   #ffffff;
-  border-color: #C71585!important;
+  background:   rgba(255, 205, 233, .65);
   border: 1px solid rgba(255, 255, 255, .8) !important;
   font-weight: bold!important;
 }
 html[data-bs-theme="dark"]  .quarto-title .quarto-category a {
-  color: #FFB3DA !important;
+  color: #ffffff !important;
+  /* #FFB3DA */
 }
-
-/* hover only adds your grow/bg/shadow */
-.quarto-category:hover,
+html[data-bs-theme="dark"]  .quarto-title .quarto-category:hover a {
+  color: #E1A8C8 !important;
+  /* #FFB3DA */
+}
+html[data-bs-theme="dark"] .quarto-category:hover,
 .quarto-categories .category:hover {
   transform: scale(1.06);
-  background: rgba(255, 255, 255, .65) !important;
+  background: #FFEAF6 !important;
   box-shadow: 0 0 6px rgba(255, 255, 255, .7) !important;
+  transition: transform 0.2s ease;
 }
+
 /*═════════════════════════════════════════════════════════════
   1 ▸  SUBTITLE (above the pills) ON *INDIVIDUAL* POST PAGES
 ═════════════════════════════════════════════════════════════*/
@@ -253,14 +265,14 @@ html[data-bs-theme="dark"]
 
 /* Optional: make *inline* links match the subtitle tint */
 html[data-bs-theme="light"]
-  .page-layout-article .content-card a             { color:#C95F9D!important; }
+  .page-layout-article .content-card a             { color:#A56087!important; font-weight: bold;}
 html[data-bs-theme="dark"]
-  .page-layout-article .content-card a             { color:#FFBCE3!important; }
+  .page-layout-article .content-card a             { color:#FFBCE3!important; font-weight: bold;}
 
 /*═════════════════════════════════════════════════════════════
   3 ▸  SUBTITLE .content-card BLOCK
 ═════════════════════════════════════════════════════════════*/
-html[data-bs-theme="light"] .quarto-title p { color:yellow!important; }
+html[data-bs-theme="light"] .quarto-title p { color:#212529!important; }
 html[data-bs-theme="dark"] .quarto-title p { color:#FFEAF6!important; }
 /*─────────────────────────────────────────────────────────────
   Search Button  – dark in both schemes + pink hover shadow
@@ -279,7 +291,7 @@ html[data-bs-theme="dark"] .quarto-title p { color:#FFEAF6!important; }
   <mark>  HIGHLIGHT  – same look in both schemes
   ────────────────────────────────────────────────────────────*/
 html[data-bs-theme="light"] mark {
-  background: #D2D2D2;          /* soft yellow */
+  background: #9C8090;          /* soft yellow */
   color: #212529;               /* dark text for contrast */
 }
 
