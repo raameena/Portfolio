@@ -16,14 +16,17 @@ website:
       # Item 1: GitHub Icon
       - icon: github
         href: https://github.com/raameena
+        target: "_blank"
 
       # Item 2: LinkedIn Icon
       - icon: linkedin
         href: https://www.linkedin.com/in/raameena/
+        target: "_blank"
 
       # Item 3: Email Icon
       - icon: envelope
         href: "mailto:raameenahmed1@gmail.com"
+        target: "_blank"
 
       # Item 4: The Search Bar
 

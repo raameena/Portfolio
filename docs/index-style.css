@@ -7,7 +7,7 @@ mark{
 
 html[data-bs-theme="light"] body {
   /* A clean, standard light grey. You can change this hex code. */
-  background-image: url('background2.jpg');
+  background-image: url('background2.jpg'); /* NIGHT TIME */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -18,13 +18,13 @@ html[data-bs-theme="light"] body {
 
 /* --- This rule applies ONLY in DARK mode --- */
 html[data-bs-theme="dark"] body {
-  background-image: url('background2.webp');
+  background-image: url('background2.webp'); /* DAY TIME */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   /* A dark fallback color while the image loads */
-  background-color: #101010; 
+   background-color: #ffffff;
 }
 
 /*─────────────────────────────────────────────────────────────
@@ -68,7 +68,7 @@ html[data-bs-theme="dark"] nav.navbar a:not(#custom-theme-toggle):not(#custom-th
   color: #D4D4D4 !important;          /* <—- pick any dark-mode tint */
 }
 html[data-bs-theme="light"] nav.navbar{background:#6b6b6b!important;}
-html[data-bs-theme="dark"]  nav.navbar{background:#aba9aa!important;}
+html[data-bs-theme="dark"]  nav.navbar{background:#878787!important;}
 
 /* LIGHT scheme — blue glow, only the toggle glyph */
 /* LIGHT scheme – glow ONLY on the theme button’s glyph */
@@ -135,16 +135,140 @@ nav.navbar .nav-link[href*="mailto:"]:hover {
   · highlight badges  (.badge)
   · inline <mark> highlights
   ────────────────────────────────────────────────────────────*/
-.quarto-post,
-.quarto-post *:not(.listing-category):not(.listing-category *)
-             :not(.quarto-category):not(.quarto-category *)
-             :not(mark),
-.quarto-post .listing-description,
-.quarto-post .listing-author,
-.quarto-post .listing-date,
-.quarto-post .listing-meta,
-.quarto-post .metadata            { color: var(--bs-body-color) !important; }
 
+html[data-bs-theme="light"] .quarto-post .listing-category,
+html[data-bs-theme="light"] .quarto-post .listing-title a,
+html[data-bs-theme="light"] .quarto-post .listing-title a:visited{
+  color: green !important;
+}
+
+html[data-bs-theme="dark"] .quarto-post .listing-category,
+html[data-bs-theme="dark"] .quarto-post .listing-title a,
+html[data-bs-theme="dark"] .quarto-post .listing-title a:visited{
+  color: blue !important;
+}
+/* =======================================================
+   PROJECT CARD: Custom Subtitle & Description Colors
+   ======================================================= */
+
+/* --- LIGHT MODE --- */
+html[data-bs-theme="light"] .listing-subtitle,
+html[data-bs-theme="light"] .listing-subtitle *,
+html[data-bs-theme="light"] .listing-description,
+html[data-bs-theme="light"] .listing-description *,
+html[data-bs-theme="light"] .listing-author,
+html[data-bs-theme="light"] .listing-author *,
+html[data-bs-theme="light"] .listing-date,
+html[data-bs-theme="light"] .listing-date *{
+  /* A vibrant, readable pink for light mode */
+  color: #C71585 !important; 
+}
+
+/* --- DARK MODE --- */
+html[data-bs-theme="dark"] .listing-subtitle,
+html[data-bs-theme="dark"] .listing-subtitle *,
+html[data-bs-theme="dark"] .listing-description,
+html[data-bs-theme="dark"] .listing-description *,
+html[data-bs-theme="dark"] .listing-author,
+html[data-bs-theme="dark"] .listing-author *,
+html[data-bs-theme="dark"] .listing-date,
+html[data-bs-theme="dark"] .listing-date *{
+  /* A lighter pink for better contrast on dark backgrounds */
+  color: #FF69B4 !important; 
+}         
+
+/*═════════════════════════════════════════════════════════════
+  INDIVIDUAL POST PAGES
+═════════════════════════════════════════════════════════════*/
+/*═════════════════════════════════════════════════════════════
+  CATEGORY PILLS • *post pages only*
+  (listing grid pills keep their existing look)
+═════════════════════════════════════════════════════════════*/
+/*   targets .quarto-title  → appears only on full post page   */
+
+/* ── LIGHT theme ──────────────────────────────────────────── */
+html[data-bs-theme="light"] .quarto-title .quarto-category {
+  background:   #FFE5F4;        /* pill body  */
+  border-color: #FFB8E8;        /* pill edge  */
+  color:        #C71585 !important;   /* text  */
+}
+html[data-bs-theme="light"] .quarto-title .quarto-category a {
+  color: #C71585 !important;          /* link inside pill */
+}
+
+/* ── DARK theme ───────────────────────────────────────────── */
+html[data-bs-theme="dark"]  .quarto-title .quarto-category {
+  background:   #37424F;
+  border-color: #586471;
+  color:        #FFB3DA !important;
+}
+html[data-bs-theme="dark"]  .quarto-title .quarto-category a {
+  color: #FFB3DA !important;
+}
+
+/* hover only adds your grow/bg/shadow */
+.quarto-category:hover,
+.quarto-categories .category:hover {
+  transform: scale(1.06);
+  background: rgba(255, 255, 255, .65) !important;
+  box-shadow: 0 0 6px rgba(255, 255, 255, .7) !important;
+}
+/*═════════════════════════════════════════════════════════════
+  1 ▸  SUBTITLE (above the pills) ON *INDIVIDUAL* POST PAGES
+═════════════════════════════════════════════════════════════*/
+html[data-bs-theme="light"]
+  header.quarto-title-banner   p.subtitle.lead     { color:#C71585!important; }
+html[data-bs-theme="dark"]
+  header.quarto-title-banner   p.subtitle.lead     { color:#FF69B4!important; }
+
+/*═════════════════════════════════════════════════════════════
+  2 ▸  BODY TEXT INSIDE EVERY .content-card BLOCK
+═════════════════════════════════════════════════════════════*/
+html[data-bs-theme="light"]
+  .page-layout-article .content-card p,
+html[data-bs-theme="light"]
+  .page-layout-article .content-card li,
+html[data-bs-theme="light"]
+  .page-layout-article .content-card th,
+html[data-bs-theme="light"]
+  .page-layout-article .content-card td,
+html[data-bs-theme="light"]
+  .page-layout-article .content-card pre code{ color:#333333!important; }
+
+html[data-bs-theme="dark"]
+  .page-layout-article .content-card p,
+html[data-bs-theme="dark"]
+  .page-layout-article .content-card li,
+html[data-bs-theme="dark"]
+  .page-layout-article .content-card th,
+html[data-bs-theme="dark"]
+  .page-layout-article .content-card td,
+html[data-bs-theme="dark"]
+  .page-layout-article .content-card pre code{ color:#FFF3FA!important; }
+
+/* Optional: make *inline* links match the subtitle tint */
+html[data-bs-theme="light"]
+  .page-layout-article .content-card a             { color:#C95F9D!important; }
+html[data-bs-theme="dark"]
+  .page-layout-article .content-card a             { color:#FFBCE3!important; }
+
+/*═════════════════════════════════════════════════════════════
+  3 ▸  SUBTITLE .content-card BLOCK
+═════════════════════════════════════════════════════════════*/
+html[data-bs-theme="light"] .quarto-title p { color:yellow!important; }
+html[data-bs-theme="dark"] .quarto-title p { color:orange!important; }
+/*─────────────────────────────────────────────────────────────
+  Search Button  – dark in both schemes + pink hover shadow
+  ────────────────────────────────────────────────────────────*/
+
+.aa-DetachedSearchButton:hover .aa-SubmitIcon {
+  transform: scale(1.11);
+  filter:
+    drop-shadow(0 0 1px rgba(232, 137, 180, 0.7))
+    drop-shadow(0 0 2px rgba(232, 137, 180, 0.6));
+  color: #ffffff;
+  transition: filter 0.1s ease, transform 0.3s ease;
+}
 
 /*─────────────────────────────────────────────────────────────
   <mark>  HIGHLIGHT  – same look in both schemes
@@ -214,12 +338,6 @@ img[src*="profPic.webp"]:hover{
   cursor: zoom-out;
 }
 
-/*─────────────────────────────────────────────────────────────
-  BODY BG fallback per scheme
-  ────────────────────────────────────────────────────────────*/
-html[data-bs-theme="dark"] body{background-color:#101010}
-
-
 /* -------------- SOCIAL ICONS --------------*/
 
 /* Base icon color for GitHub */
@@ -247,22 +365,6 @@ html[data-bs-theme="dark"] body{background-color:#101010}
 .about-links a:hover{
   transform: scale(1.09);
   transition: transform 0.4s ease;
-}
-/* ----------- NAVIGATION BAR -------------- */
-
-/* Make all navbar links white */
-/* Make all navbar links white, EXCEPT the theme toggle */
-
-/* social icons bigger (home) */
-/* Force the search icon SVG to be white */
-
-.aa-DetachedSearchButton:hover .aa-SubmitIcon {
-  transform: scale(1.11);
-  filter:
-    drop-shadow(0 0 1px rgba(232, 137, 180, 0.7))
-    drop-shadow(0 0 2px rgba(232, 137, 180, 0.6));
-  color: #ffffff;
-  transition: filter 0.1s ease, transform 0.3s ease;
 }
 
 /* ------------------ PROJECT.QMD ------------------ */
@@ -349,39 +451,6 @@ div.category:hover {
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow:
     0 0 4px rgba(255, 255, 255, 0.7)   /* soft pink glow */
-}
-
-/* ─── Post-page category pills (keep grey text, always) ─────── */
-
-/* wrapper keeps your border, scale, shadow, etc. */
-.quarto-category,
-.quarto-categories .category {
-  transition: transform .25s ease;
-  display: inline-block;
-  cursor: pointer;
-  padding: 0.2rem 0.5rem;
-  background: rgba(255, 255, 255, .30);
-  border: 1.3px solid rgba(255, 255, 255, .8) !important;
-  border-radius: 6px;
-}
-
-/* anchor inside: force Bootstrap-grey in every state */
-.quarto-category > a,
-.quarto-category > a:visited,
-.quarto-category:hover > a,
-.quarto-categories .category > a,
-.quarto-categories .category > a:visited,
-.quarto-categories .category:hover > a {
-  color: #4d4d4d !important;   /* stays grey, never turns white */
-  text-decoration: none;       /* keep the pill look            */
-}
-
-/* hover only adds your grow/bg/shadow */
-.quarto-category:hover,
-.quarto-categories .category:hover {
-  transform: scale(1.06);
-  background: rgba(255, 255, 255, .65);
-  box-shadow: 0 0 6px rgba(255, 255, 255, .7) !important;
 }
 
 /* ------------- BANNER -------------- */
@@ -555,44 +624,3 @@ div.category:hover {
    FORCE TRANSPARENT ARTICLE BACKGROUND SO CARD SHADOWS SHOW
    ============================================================ */
 .page-layout-article .quarto-container { background:transparent !important; }
-
-/* ============================================================
-   POST-DESCRIPTION WEIGHT (listing vs. post page)
-   ============================================================ */
-
-/* 1. Ensure description is NORMAL weight in the projects / listing cards */
-/* This targets all content within the listing post's description */
-.quarto-post .listing-description,
-.quarto-post .listing-description * {
-  font-weight: 400 !important; /* Forces normal weight for listing descriptions */
-}
-
-/* 2. Make the main description BOLD on the individual post page */
-/* This targets the specific "Comprehensive analysis..." text. */
-/* It leverages the fact that this is often the p.subtitle.lead or a specifically styled element. */
-/* If your "Comprehensive analysis..." is in the first content-card, this is highly specific. */
-.page-layout-article .content-card:first-child p .hover-word,
-.page-layout-article p.subtitle.lead .hover-word,
-.quarto-title-block .subtitle.lead .hover-word {
-  font-weight: 700 !important; /* Forces bold weight for these spans */
-}
-/* 3. Ensure ALL other text within ALL other content cards on the post page is NORMAL,
-      unless explicitly bolded by Markdown (strong/b) within that card. */
-/* This rule counteracts any unintended bolding from other rules for other content cards. */
-.page-layout-article .content-card p,
-.page-layout-article .content-card h1,
-.page-layout-article .content-card h2,
-.page-layout-article .content-card h3,
-.page-layout-article .content-card li {
-  font-weight: normal !important; /* Set most elements to normal font weight */
-}
-.page-layout-article .content-card blockquote.blockquote {
-  color: #945e75 !important; /* Example: BlueViolet. Change to your desired color */
-}
-/* However, ensure any *explicitly* bolded text (with ** or __) within any content card
-   on the post page *still* gets bolded, overriding the 'normal' rule above. */
-.page-layout-article .content-card strong,
-.page-layout-article .content-card b {
-  font-weight: 700 !important; /* Re-apply bold for explicit bolding */
-}
-
