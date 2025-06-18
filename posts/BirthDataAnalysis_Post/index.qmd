@@ -32,19 +32,6 @@ categories: [Data Analysis, Data Modeling]
 
 ---
 
-## ♡ Code & data
-
-::: {.content-card}
-::: {.js-hover-effect}
-
-[GitHub Repository](https://github.com/raameena/Birth-Data-Analysis){target="_blank"}  
-[Kaggle dataset](https://www.kaggle.com/datasets/danbraswell/temporary-us-births){target="_blank"}
-
-:::
-:::
-
----
-
 ## ♡ Functions & methods
 
 ::: {.content-card}
@@ -57,6 +44,19 @@ categories: [Data Analysis, Data Modeling]
 | **Classification** | Logistic <mark>glm</mark> predicting **High_EDU** (Bachelor’s +) from age & birth-weight |
 | **Visualisation** | <mark>ggplot2</mark> bar / violin / scatter + <mark>facet_wrap()</mark> and <mark>geom_text_repel()</mark> |
 
+:::
+
+---
+
+## ♡ Code & data
+
+::: {.content-card}
+::: {.js-hover-effect}
+
+[GitHub Repository](https://github.com/raameena/Birth-Data-Analysis){target="_blank"}  
+[Kaggle dataset](https://www.kaggle.com/datasets/danbraswell/temporary-us-births){target="_blank"}
+
+:::
 :::
 
 ---

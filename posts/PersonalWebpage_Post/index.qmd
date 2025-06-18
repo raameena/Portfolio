@@ -34,12 +34,26 @@ categories: [RStudio, Front-End]
 
 ---
 
+## ♡ Code & data
+
+::: {.content-card}
+::: {.js-hover-effect}
+
+[GitHub Repository](https://github.com/raameena/Portfolio){target="_blank"}
+
+:::
+:::
+
+---
+
 ## ♡ Tech stack
 
 ::: {.content-card}
 
-| Layer | Choices & Rationale |
-|-------|--------------------|
+| Layer              | Choices & Rationale |
+|--------------------|---------------------|
+| **Site generator** | <mark>Quarto</mark> 1.5 — auto listings, search, **built-in light/dark theme toggle** |
+| **Styling**        | Custom **CSS** — frosted cards, pink cursor glow, theme-aware colours |
 | **Site generator** | <mark>quarto</mark> 0.9 › renders posts, listing, search |
 | **Styling** | **Tailored <mark>CSS</mark>** — glass-morphism cards, pink hover glows, three-layer banner |
 | **Interactivity** | Vanilla **<mark>JavaScript</mark>** (≈ 140 LoC)<br>• word-hover script <br>• cursor spotlight <br>• image lightbox |
@@ -51,21 +65,11 @@ categories: [RStudio, Front-End]
 
 ---
 
-## ♡ Code & data
-
-::: {.content-card}
-::: {.js-hover-effect}
-
-[GitHub Repository](https://github.com/raameena/Portfolio){target="_blank"}  
-
-:::
-:::
-
----
-
 ## ♡ Features
 
 ::: {.content-card}
+
+* **One-click light / dark mode** — theme switcher remembers your preference. 
 
 * **Animated banner** — three translucent layers + radial spotlight that tracks  
   the cursor.

@@ -25,7 +25,7 @@
     "href": "posts/PersonalWebpage_Post/index.html#tech-stack",
     "title": "Personal Webpage",
     "section": "♡ Tech stack",
-    "text": "♡ Tech stack\n\n\n\n\n\n\n\n\nLayer\nChoices & Rationale\n\n\n\n\nSite generator\nquarto 0.9 › renders posts, listing, search\n\n\nStyling\nTailored CSS — glass-morphism cards, pink hover glows, three-layer banner\n\n\nInteractivity\nVanilla JavaScript (≈ 140 LoC)• word-hover script • cursor spotlight • image lightbox\n\n\nAssets\nAll images converted to WebP with ImageMagick (magick) and capped at 1600 px\n\n\nDev tools\nRStudio for QMD editing • VS Code for CSS/JS • Homebrew on macOS\n\n\nHosting\nGitHub Pages (gh-pages branch)"
+    "text": "♡ Tech stack\n\n\n\n\n\n\n\n\nLayer\nChoices & Rationale\n\n\n\n\nSite generator\nQuarto 1.5 — auto listings, search, built-in light/dark theme toggle\n\n\nStyling\nCustom CSS — frosted cards, pink cursor glow, theme-aware colours\n\n\nSite generator\nquarto 0.9 › renders posts, listing, search\n\n\nStyling\nTailored CSS — glass-morphism cards, pink hover glows, three-layer banner\n\n\nInteractivity\nVanilla JavaScript (≈ 140 LoC)• word-hover script • cursor spotlight • image lightbox\n\n\nAssets\nAll images converted to WebP with ImageMagick (magick) and capped at 1600 px\n\n\nDev tools\nRStudio for QMD editing • VS Code for CSS/JS • Homebrew on macOS\n\n\nHosting\nGitHub Pages (gh-pages branch)"
   },
   {
     "objectID": "posts/PersonalWebpage_Post/index.html#code-data",
@@ -39,7 +39,7 @@
     "href": "posts/PersonalWebpage_Post/index.html#features",
     "title": "Personal Webpage",
     "section": "♡ Features",
-    "text": "♡ Features\n\n\nAnimated banner — three translucent layers + radial spotlight that tracks\nthe cursor.\nWord-by-word hover — page headers and paragraphs bloom with a soft glow.\nGlass cards — posts and call-outs float above the background, zooming &\ntinting pink on hover.\nLightbox avatar — click my profile photo to view a full-size version,\ndismiss with one click.\nInstant search — Algolia Autocomplete powered, loads only on demand."
+    "text": "♡ Features\n\n\nOne-click light / dark mode — theme switcher remembers your preference.\nAnimated banner — three translucent layers + radial spotlight that tracks\nthe cursor.\nWord-by-word hover — page headers and paragraphs bloom with a soft glow.\nGlass cards — posts and call-outs float above the background, zooming &\ntinting pink on hover.\nLightbox avatar — click my profile photo to view a full-size version,\ndismiss with one click.\nInstant search — Algolia Autocomplete powered, loads only on demand."
   },
   {
     "objectID": "index.html",
