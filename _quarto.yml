@@ -41,6 +41,9 @@ website:
 # Use the format structure that we know works in your environment
 format:
   html:
+    toc: true           # turn on TOC
+    toc-location: right # stick it on the right side
+    toc-depth: 2        # include only up to H2
     theme: cosmo
     css: 
     - index-style.css

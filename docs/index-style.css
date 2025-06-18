@@ -314,18 +314,12 @@ html[data-bs-theme="dark"]
   2 ▸  BODY TEXT INSIDE EVERY .content-card BLOCK
 ═════════════════════════════════════════════════════════════*/
 
-/* For light theme */
-html[data-bs-theme="light"] .page-layout-article .content-card blockquote {
-    color: #662848!important;
-}
-
-/* For dark theme */
-html[data-bs-theme="dark"] .page-layout-article .content-card blockquote {
-    color: #AA4B7E!important;
-} 
-
 html[data-bs-theme="light"]
   .page-layout-article .content-card h3,
+html[data-bs-theme="light"]
+  .page-layout-article .content-card p:not("blockquote"),
+html[data-bs-theme="light"]
+  .page-layout-article .content-card p,
 html[data-bs-theme="light"]
   .page-layout-article .content-card li,
 html[data-bs-theme="light"]
@@ -337,6 +331,8 @@ html[data-bs-theme="light"]
 
 html[data-bs-theme="dark"]
   .page-layout-article .content-card h3,
+html[data-bs-theme="dark"]
+  .page-layout-article .content-card p:not("blockquote"),
 html[data-bs-theme="dark"]
   .page-layout-article .content-card li,
 html[data-bs-theme="dark"]
@@ -352,11 +348,93 @@ html[data-bs-theme="light"]
 html[data-bs-theme="dark"]
   .page-layout-article .content-card a             { color:#AA4B7E!important; font-weight: bold;}
 
+/* For light theme */
+html[data-bs-theme="light"] .page-layout-article .content-card blockquote {
+    color: #662848!important;
+}
+
+/* For dark theme */
+html[data-bs-theme="dark"] .page-layout-article .content-card blockquote {
+    color: #AA4B7E!important;
+} 
+
 /*═════════════════════════════════════════════════════════════
   3 ▸  SUBTITLE .content-card BLOCK
 ═════════════════════════════════════════════════════════════*/
 html[data-bs-theme="light"] .quarto-title p { color:#212529!important; }
 html[data-bs-theme="dark"] .quarto-title p { color:#FFEAF6!important; }
+
+/* Style the Quarto TOC container */
+html[data-bs-theme="light"] .sidebar #TOC {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 4px rgba(255,255,255,0.2),
+    0 4px 20px rgba(0,0,0,0.1);
+  transition: background-color .3s ease, box-shadow .2s ease;
+}
+html[data-bs-theme="dark"] .sidebar #TOC {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 4px rgba(255,255,255,0.2),
+    0 4px 20px rgba(0,0,0,0.1);
+  transition: background-color .3s ease, box-shadow .2s ease;
+}
+
+/* TOC links */
+html[data-bs-theme="light"] .sidebar #TOC ul {
+  color: #212529;
+  text-decoration: none;
+  display: block;
+  padding: 0.2rem 0;
+  transition: color .2s ease, padding-left .2s ease;
+}
+html[data-bs-theme="dark"] .sidebar #TOC ul {
+  color: #FFEAF6;
+  text-decoration: none;
+  display: block;
+  padding: 0.2rem 0;
+  transition: color .2s ease, padding-left .2s ease;
+}
+html[data-bs-theme="light"] .sidebar #TOC ul a:hover {
+  color: #854064!important;
+  padding-left: 0.5rem;
+  filter:
+    drop-shadow(0 0 1px rgba(171, 88, 126, 0.7))
+    drop-shadow(0 0 2px rgba(171, 88, 126, 0.6));
+}
+html[data-bs-theme="dark"] .sidebar #TOC ul a:hover {
+  color: #D46898!important;
+  padding-left: 0.5rem;
+  filter:
+    drop-shadow(0 0 1px rgba(231, 176, 205, 0.7))
+    drop-shadow(0 0 2px rgba(231, 176, 205, 0.6));
+}
+
+/* light‐mode — style the “active” TOC link */
+html[data-bs-theme="light"] .sidebar nav#TOC.toc-active ul li a.nav-link.active {
+  color: #662848 !important;
+  border-left: 3px solid #662848 !important;
+  padding-left: 0.5rem !important;
+}
+
+/* dark‐mode — same for dark theme */
+html[data-bs-theme="dark"] .sidebar nav#TOC.toc-active ul li a.nav-link.active {
+  color: #AA4B7E !important;
+  border-left: 3px solid #AA4B7E !important;
+  padding-left: 0.5rem !important;
+}
+
+
 /*─────────────────────────────────────────────────────────────
   Search Button  – dark in both schemes + pink hover shadow
   ────────────────────────────────────────────────────────────*/
