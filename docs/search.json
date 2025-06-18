@@ -4,7 +4,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "In Progress: AI Homework Helper\n\n\nBuilding an AI that will hopefully help me with my homework \n\n\n\nIn Progress\n\n\n\n\n\n\n\n\n\nJun 18, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nPersonal Webpage\n\n\nBuilding a fully custom Quarto × HTML × CSS × JavaScript portfolio \n\n\n\nRStudio\n\n\nFront-End\n\n\n\n\n\n\n\n\n\nJun 14, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nBirth Data Analysis\n\n\nBuilding an R × tidyverse × ggplot2 pipeline to model U.S. births (2016 – 2021) \n\n\n\nData Analysis\n\n\nData Modeling\n\n\n\n\n\n\n\n\n\nApr 10, 2025\n\n\nRaameen Ahmed, Muskan Ahmad, Malik Mustafa\n\n\n\n\n\n\n\n\n\n\n\n\nSearch System\n\n\nBuilding a C++ × STL × CLI engine for instant look-ups on all 50 U.S. states \n\n\n\nAlgorithms\n\n\nCommand-Line\n\n\n\n\n\n\n\n\n\nDec 10, 2024\n\n\nRaameen Ahmed\n\n\n\n\n\n\nNo matching items"
+    "text": "Building an AI-Powered Learning Assistant\n\n\nA full-stack application leveraging generative AI for homework help, with an integrated data science module to analyze and understand learning patterns. \n\n\n\nSoftware Engineering\n\n\nData Science\n\n\nFull-Stack\n\n\nPython\n\n\nReact\n\n\n\n\n\n\n\n\n\nJun 18, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nPersonal Webpage\n\n\nBuilding a fully custom Quarto × HTML × CSS × JavaScript portfolio \n\n\n\nRStudio\n\n\nFront-End\n\n\n\n\n\n\n\n\n\nJun 14, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nBirth Data Analysis\n\n\nBuilding an R × tidyverse × ggplot2 pipeline to model U.S. births (2016 – 2021) \n\n\n\nData Analysis\n\n\nData Modeling\n\n\n\n\n\n\n\n\n\nApr 10, 2025\n\n\nRaameen Ahmed, Muskan Ahmad, Malik Mustafa\n\n\n\n\n\n\n\n\n\n\n\n\nSearch System\n\n\nBuilding a C++ × STL × CLI engine for instant look-ups on all 50 U.S. states \n\n\n\nAlgorithms\n\n\nCommand-Line\n\n\n\n\n\n\n\n\n\nDec 10, 2024\n\n\nRaameen Ahmed\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/PersonalWebpage_Post/index.html",
@@ -142,7 +142,7 @@
   {
     "objectID": "posts/AIHomeworkHelper_Post/index.html",
     "href": "posts/AIHomeworkHelper_Post/index.html",
-    "title": "In Progress: AI Homework Helper",
+    "title": "Building an AI-Powered Learning Assistant",
     "section": "",
     "text": "Goals: Learn to use Flask for APIs, Learn React for front end, Learn NumPys and Pandas to handle my data for my AI\nI currently do not know React and know very basic Python ( haven’t taken DSA yet but have been learning the concepts myself from YouTube and ChatGPT). However, I am taking two classes ( Calc 3 and Ethics ) and want to make a specialized AI myself that will make these classes ( and future classes ) less work.\n\n\nI predict it will take me about 1-2 months, but we shall see! I will record my progress down below, and then make a final post later on :)"
   },
@@ -166,5 +166,47 @@
     "title": "In Progress: AI Homework Helper",
     "section": "♡ AI Functions",
     "text": "♡ AI Functions\n\n\nBe able to find quotes in pdfs that the user uploads\nGive the exact line, sentence number, or paragraph of said quote\nRecord frequency of topics the user asks questions on + display report\nRecord lengths of user’s inputs and accuracy of AI’s response ( ask user if answer was accurate ) -&gt; does longer input = more accurate response ?\nUse the data to tweak the AI to be more accurate"
+  },
+  {
+    "objectID": "posts/AIHomeworkHelper_Post/index.html#project-blueprint",
+    "href": "posts/AIHomeworkHelper_Post/index.html#project-blueprint",
+    "title": "Building an AI-Powered Learning Assistant",
+    "section": "♡ Project Blueprint",
+    "text": "♡ Project Blueprint\n\nThis project is an exercise in both full-stack software engineering and applied data science. The architecture is designed to be modular, allowing for robust features and insightful analytics."
+  },
+  {
+    "objectID": "posts/AIHomeworkHelper_Post/index.html#case-study-implementation",
+    "href": "posts/AIHomeworkHelper_Post/index.html#case-study-implementation",
+    "title": "Building an AI-Powered Learning Assistant",
+    "section": "♡ Case Study & Implementation",
+    "text": "♡ Case Study & Implementation\n\nThis section will be updated with detailed write-ups as major milestones are completed.\n\nMilestone 1: Backend API & Database Architecture\n(Details on setting up the Flask API, defining endpoints, and designing the PostgreSQL schema will go here…)\n\n\nMilestone 2: Core Frontend Development in React\n(Details on building the user interface components, managing state, and connecting to the backend API will go here…)\n\n\nMilestone 3: Data Analytics Module Implementation\n(Details on the data pipeline, SQL queries, Pandas transformations, and the creation of visualizations will go here…)"
+  },
+  {
+    "objectID": "posts/AIHomeworkHelper_Post/index.html#current-status",
+    "href": "posts/AIHomeworkHelper_Post/index.html#current-status",
+    "title": "Building an AI-Powered Learning Assistant",
+    "section": "♡ Current Status",
+    "text": "♡ Current Status\n\n(As of June 18, 2025)\nThe project is in the initial planning and architecture phase. The primary focus is on defining the database schema and developing the core API endpoints for user interaction and PDF processing.\nNext Steps: 1. Implement the initial Flask application structure and database models. 2. Begin development of the primary React components for the user interface."
+  },
+  {
+    "objectID": "posts/AIHomeworkHelper_Post/index.html#executive-summary",
+    "href": "posts/AIHomeworkHelper_Post/index.html#executive-summary",
+    "title": "Building an AI-Powered Learning Assistant",
+    "section": "♡ Executive Summary",
+    "text": "♡ Executive Summary\n\nHomework Helper AI is a full-stack application designed to assist students by leveraging large language models. Built with a Python/Flask backend and a React frontend, the project also features a comprehensive data science module that analyzes user query patterns in real-time to provide insights into learning behaviors. The goal is to create not just a helpful tool, but a system that learns about learning itself."
+  },
+  {
+    "objectID": "posts/AIHomeworkHelper_Post/index.html#tech-stack",
+    "href": "posts/AIHomeworkHelper_Post/index.html#tech-stack",
+    "title": "Building an AI-Powered Learning Assistant",
+    "section": "♡ Tech Stack",
+    "text": "♡ Tech Stack\n\n\nFrontend: React, CSS3, HTML5\nBackend: Python, Flask\nDatabase: PostgreSQL (for storing user queries and application data)\nData Science: Pandas, NumPy, Scikit-learn, Plotly\nDeployment: Vercel (Frontend), Heroku/Render (Backend & Database)"
+  },
+  {
+    "objectID": "posts/AIHomeworkHelper_Post/index.html#core-features-roadmap",
+    "href": "posts/AIHomeworkHelper_Post/index.html#core-features-roadmap",
+    "title": "Building an AI-Powered Learning Assistant",
+    "section": "♡ Core Features & Roadmap",
+    "text": "♡ Core Features & Roadmap\n\n\nAI-Powered PDF Analysis (SWE): Develop a backend service that allows users to upload PDF documents and ask questions about their content, receiving precise answers with source citations.\nUser Interaction Dashboard (SWE/DS): Create a user-facing dashboard that visualizes their personal usage statistics, such as most frequent topics and query history, using data processed by Pandas and visualized with a library like Plotly.\nUsage Analytics & Insight Engine (DS): Build an admin-facing analytics module to analyze aggregated, anonymized user data. The initial goal is to model the relationship between query characteristics (e.g., length, topic) and the AI’s response quality.\nPredictive Quality Monitoring (DS): Implement a user feedback mechanism (e.g., “was this answer helpful?”) to create a labeled dataset. Use this to train a Scikit-learn classification model that can predict a user’s satisfaction with an answer before they even rate it."
   }
 ]

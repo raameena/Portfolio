@@ -1,10 +1,10 @@
 ---
-title: "In Progress: AI Homework Helper"
+title: "Building an AI-Powered Learning Assistant"
 subtitle: |
-  Building an AI that will hopefully help me with my homework
+  A full-stack application leveraging generative AI for homework help, with an integrated data science module to analyze and understand learning patterns.
 author: "Raameen Ahmed"
 date: "2025-06-18"
-categories: [In Progress]
+categories: [Software Engineering, Data Science, Full-Stack, Python, React]
 ---
 
 ::: {.content-card}
@@ -15,26 +15,79 @@ categories: [In Progress]
 
 > I predict it will take me about 1-2 months, but we shall see! I will record my progress down below, and then make a final post later on :)
 
-:::
+::: 
 
-## ♡ Updates
-
-::: {.content-card}
-
-### June 18, 2025
-
-I will shortly begin working on an AI Homework Helper, I plan to integrate SWE and DS with this project. I will need to learn a lot abut how AIs function and behave along with back end logistics ( I've never worked with back end so bear with me ). I want to integrate ds by gathering input data and presenting them to the user ( their individual stats of some sort ) using pandas and numpy. This is still early ideas, I my change them with time.
-
-:::
-
-## ♡ AI Functions
+## ♡ Executive Summary
 
 ::: {.content-card}
 
-* Be able to find quotes in pdfs that the user uploads
-* Give the exact line, sentence number, or paragraph of said quote
-* Record frequency of topics the user asks questions on + display report
-* Record lengths of user's inputs and accuracy of AI's response ( ask user if answer was accurate ) -> does longer input = more accurate response ?
-* Use the data to tweak the AI to be more accurate
+**Homework Helper AI is a full-stack application designed to assist students by leveraging large language models. Built with a Python/Flask backend and a React frontend, the project also features a comprehensive data science module that analyzes user query patterns in real-time to provide insights into learning behaviors. The goal is to create not just a helpful tool, but a system that learns about learning itself.**
 
 :::
+
+## ♡ Project Blueprint
+
+::: {.content-card}
+
+**This project is an exercise in both full-stack software engineering and applied data science. The architecture is designed to be modular, allowing for robust features and insightful analytics.**
+
+::: 
+
+## ♡ Tech Stack
+
+::: {.content-card}
+
+* **Frontend:** React, CSS3, HTML5
+* **Backend:** Python, Flask
+* **Database:** PostgreSQL (for storing user queries and application data)
+* **Data Science:** Pandas, NumPy, Scikit-learn, Plotly
+* **Deployment:** Vercel (Frontend), Heroku/Render (Backend & Database)
+
+::: 
+
+## ♡  Core Features & Roadmap
+
+::: {.content-card}
+
+1.  **AI-Powered PDF Analysis (SWE):** Develop a backend service that allows users to upload PDF documents and ask questions about their content, receiving precise answers with source citations.
+2.  **User Interaction Dashboard (SWE/DS):** Create a user-facing dashboard that visualizes their personal usage statistics, such as most frequent topics and query history, using data processed by Pandas and visualized with a library like Plotly.
+3.  **Usage Analytics & Insight Engine (DS):** Build an admin-facing analytics module to analyze aggregated, anonymized user data. The initial goal is to model the relationship between query characteristics (e.g., length, topic) and the AI's response quality.
+4.  **Predictive Quality Monitoring (DS):** Implement a user feedback mechanism (e.g., "was this answer helpful?") to create a labeled dataset. Use this to train a Scikit-learn classification model that can predict a user's satisfaction with an answer before they even rate it.
+
+:::
+
+## ♡ Case Study & Implementation
+
+::: {.content-card}
+
+*This section will be updated with detailed write-ups as major milestones are completed.*
+
+### Milestone 1: Backend API & Database Architecture
+
+*(Details on setting up the Flask API, defining endpoints, and designing the PostgreSQL schema will go here...)*
+
+### Milestone 2: Core Frontend Development in React
+
+*(Details on building the user interface components, managing state, and connecting to the backend API will go here...)*
+
+### Milestone 3: Data Analytics Module Implementation
+
+*(Details on the data pipeline, SQL queries, Pandas transformations, and the creation of visualizations will go here...)*
+
+:::
+
+## ♡ Current Status
+
+::: {.content-card}
+
+### **(As of June 18, 2025)**
+
+The project is in the initial planning and architecture phase. The primary focus is on defining the database schema and developing the core API endpoints for user interaction and PDF processing.
+
+**Next Steps:**
+1.  Implement the initial Flask application structure and database models.
+2.  Begin development of the primary React components for the user interface.
+
+::: 
+
+

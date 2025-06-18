@@ -325,6 +325,8 @@ html[data-bs-theme="dark"] .page-layout-article .content-card blockquote {
 } 
 
 html[data-bs-theme="light"]
+  .page-layout-article .content-card h3,
+html[data-bs-theme="light"]
   .page-layout-article .content-card li,
 html[data-bs-theme="light"]
   .page-layout-article .content-card th,
@@ -333,6 +335,8 @@ html[data-bs-theme="light"]
 html[data-bs-theme="light"]
   .page-layout-article .content-card pre code{ color:#333333!important; }
 
+html[data-bs-theme="dark"]
+  .page-layout-article .content-card h3,
 html[data-bs-theme="dark"]
   .page-layout-article .content-card li,
 html[data-bs-theme="dark"]

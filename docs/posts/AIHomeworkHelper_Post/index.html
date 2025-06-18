@@ -9,7 +9,7 @@
 <meta name="author" content="Raameen Ahmed">
 <meta name="dcterms.date" content="2025-06-18">
 
-<title>In Progress: AI Homework Helper – Raameen Ahmed</title>
+<title>Building an AI-Powered Learning Assistant – Raameen Ahmed</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -132,10 +132,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">In Progress: AI Homework Helper</h1>
-            <p class="subtitle lead"></p><p>Building an AI that will hopefully help me with my homework</p><p></p>
+      <h1 class="title">Building an AI-Powered Learning Assistant</h1>
+            <p class="subtitle lead"></p><p>A full-stack application leveraging generative AI for homework help, with an integrated data science module to analyze and understand learning patterns.</p><p></p>
                                 <div class="quarto-categories">
-                <div class="quarto-category">In Progress</div>
+                <div class="quarto-category">Software Engineering</div>
+                <div class="quarto-category">Data Science</div>
+                <div class="quarto-category">Full-Stack</div>
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">React</div>
               </div>
                   </div>
   </div>
@@ -181,24 +185,66 @@ ul.task-list li input[type="checkbox"] {
 <p>I predict it will take me about 1-2 months, but we shall see! I will record my progress down below, and then make a final post later on :)</p>
 </blockquote>
 </div>
-<section id="updates" class="level2">
-<h2 class="anchored" data-anchor-id="updates">♡ Updates</h2>
-<section id="june-18-2025" class="level3 content-card">
-<h3 class="anchored" data-anchor-id="june-18-2025">June 18, 2025</h3>
-<p>I will shortly begin working on an AI Homework Helper, I plan to integrate SWE and DS with this project. I will need to learn a lot abut how AIs function and behave along with back end logistics ( I’ve never worked with back end so bear with me ). I want to integrate ds by gathering input data and presenting them to the user ( their individual stats of some sort ) using pandas and numpy. This is still early ideas, I my change them with time.</p>
+<section id="executive-summary" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary">♡ Executive Summary</h2>
+<div class="content-card">
+<p><strong>Homework Helper AI is a full-stack application designed to assist students by leveraging large language models. Built with a Python/Flask backend and a React frontend, the project also features a comprehensive data science module that analyzes user query patterns in real-time to provide insights into learning behaviors. The goal is to create not just a helpful tool, but a system that learns about learning itself.</strong></p>
+</div>
 </section>
+<section id="project-blueprint" class="level2">
+<h2 class="anchored" data-anchor-id="project-blueprint">♡ Project Blueprint</h2>
+<div class="content-card">
+<p><strong>This project is an exercise in both full-stack software engineering and applied data science. The architecture is designed to be modular, allowing for robust features and insightful analytics.</strong></p>
+</div>
 </section>
-<section id="ai-functions" class="level2">
-<h2 class="anchored" data-anchor-id="ai-functions">♡ AI Functions</h2>
+<section id="tech-stack" class="level2">
+<h2 class="anchored" data-anchor-id="tech-stack">♡ Tech Stack</h2>
 <div class="content-card">
 <ul>
-<li>Be able to find quotes in pdfs that the user uploads</li>
-<li>Give the exact line, sentence number, or paragraph of said quote</li>
-<li>Record frequency of topics the user asks questions on + display report</li>
-<li>Record lengths of user’s inputs and accuracy of AI’s response ( ask user if answer was accurate ) -&gt; does longer input = more accurate response ?</li>
-<li>Use the data to tweak the AI to be more accurate</li>
+<li><strong>Frontend:</strong> React, CSS3, HTML5</li>
+<li><strong>Backend:</strong> Python, Flask</li>
+<li><strong>Database:</strong> PostgreSQL (for storing user queries and application data)</li>
+<li><strong>Data Science:</strong> Pandas, NumPy, Scikit-learn, Plotly</li>
+<li><strong>Deployment:</strong> Vercel (Frontend), Heroku/Render (Backend &amp; Database)</li>
 </ul>
 </div>
+</section>
+<section id="core-features-roadmap" class="level2">
+<h2 class="anchored" data-anchor-id="core-features-roadmap">♡ Core Features &amp; Roadmap</h2>
+<div class="content-card">
+<ol type="1">
+<li><strong>AI-Powered PDF Analysis (SWE):</strong> Develop a backend service that allows users to upload PDF documents and ask questions about their content, receiving precise answers with source citations.</li>
+<li><strong>User Interaction Dashboard (SWE/DS):</strong> Create a user-facing dashboard that visualizes their personal usage statistics, such as most frequent topics and query history, using data processed by Pandas and visualized with a library like Plotly.</li>
+<li><strong>Usage Analytics &amp; Insight Engine (DS):</strong> Build an admin-facing analytics module to analyze aggregated, anonymized user data. The initial goal is to model the relationship between query characteristics (e.g., length, topic) and the AI’s response quality.</li>
+<li><strong>Predictive Quality Monitoring (DS):</strong> Implement a user feedback mechanism (e.g., “was this answer helpful?”) to create a labeled dataset. Use this to train a Scikit-learn classification model that can predict a user’s satisfaction with an answer before they even rate it.</li>
+</ol>
+</div>
+</section>
+<section id="case-study-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="case-study-implementation">♡ Case Study &amp; Implementation</h2>
+<div class="content-card">
+<p><em>This section will be updated with detailed write-ups as major milestones are completed.</em></p>
+<section id="milestone-1-backend-api-database-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="milestone-1-backend-api-database-architecture">Milestone 1: Backend API &amp; Database Architecture</h3>
+<p><em>(Details on setting up the Flask API, defining endpoints, and designing the PostgreSQL schema will go here…)</em></p>
+</section>
+<section id="milestone-2-core-frontend-development-in-react" class="level3">
+<h3 class="anchored" data-anchor-id="milestone-2-core-frontend-development-in-react">Milestone 2: Core Frontend Development in React</h3>
+<p><em>(Details on building the user interface components, managing state, and connecting to the backend API will go here…)</em></p>
+</section>
+<section id="milestone-3-data-analytics-module-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="milestone-3-data-analytics-module-implementation">Milestone 3: Data Analytics Module Implementation</h3>
+<p><em>(Details on the data pipeline, SQL queries, Pandas transformations, and the creation of visualizations will go here…)</em></p>
+</section>
+</div>
+</section>
+<section id="current-status" class="level2">
+<h2 class="anchored" data-anchor-id="current-status">♡ Current Status</h2>
+<section id="as-of-june-18-2025" class="level3 content-card">
+<h3 class="anchored" data-anchor-id="as-of-june-18-2025"><strong>(As of June 18, 2025)</strong></h3>
+<p>The project is in the initial planning and architecture phase. The primary focus is on defining the database schema and developing the core API endpoints for user interaction and PDF processing.</p>
+<p><strong>Next Steps:</strong> 1. Implement the initial Flask application structure and database models. 2. Begin development of the primary React components for the user interface.</p>
+</section>
 
 
 </section>
