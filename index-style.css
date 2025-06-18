@@ -56,14 +56,12 @@ p.subtitle.lead .hover-word:hover{font-weight:normal}
 /* -------------------- Headers -------------------------- */
 html[data-bs-theme="light"] h1,
 html[data-bs-theme="light"] h1 .hover-letter{ color:#59414D!important; }
-html[data-bs-theme="light"] p,
-html[data-bs-theme="light"] p .hover-word{ color:#3E2D36!important; }
+html[data-bs-theme="light"] p .hover-word { color:#3E2D36; }
 html[data-bs-theme="light"] h2 { color:#4B3340 !important; }  /* h2 - posts page */
 html[data-bs-theme="light"] h5 { color:#4B3340 !important; }  /* h5 -categoies  */
 
 html[data-bs-theme="dark"]  h1,
 html[data-bs-theme="dark"]  h1 .hover-letter{ color:#F7D8EA!important; }
-html[data-bs-theme="dark"]  p,
 html[data-bs-theme="dark"]  p .hover-word{ color:#FFF2F9!important; }
 html[data-bs-theme="dark"]  h2 { color:#F1C0E2 !important; }
 html[data-bs-theme="dark"]  h5 { color:#F1C0E2 !important; }
@@ -318,12 +316,12 @@ html[data-bs-theme="dark"]
 
 /* For light theme */
 html[data-bs-theme="light"] .page-layout-article .content-card blockquote {
-    color: #662848;
+    color: #662848!important;
 }
 
 /* For dark theme */
 html[data-bs-theme="dark"] .page-layout-article .content-card blockquote {
-    color: #AA4B7E;
+    color: #AA4B7E!important;
 } 
 
 html[data-bs-theme="light"]
