@@ -139,13 +139,13 @@ nav.navbar .nav-link[href*="mailto:"]:hover {
 html[data-bs-theme="light"] .quarto-post .listing-category,
 html[data-bs-theme="light"] .quarto-post .listing-title a,
 html[data-bs-theme="light"] .quarto-post .listing-title a:visited{
-  color: green !important;
+  color: #3E2D36 !important;
 }
 
 html[data-bs-theme="dark"] .quarto-post .listing-category,
 html[data-bs-theme="dark"] .quarto-post .listing-title a,
 html[data-bs-theme="dark"] .quarto-post .listing-title a:visited{
-  color: blue !important;
+  color: #FFEAF6 !important;
 }
 /* =======================================================
    PROJECT CARD: Custom Subtitle & Description Colors
@@ -161,7 +161,7 @@ html[data-bs-theme="light"] .listing-author *,
 html[data-bs-theme="light"] .listing-date,
 html[data-bs-theme="light"] .listing-date *{
   /* A vibrant, readable pink for light mode */
-  color: #C71585 !important; 
+  color: #101010 !important; 
 }
 
 /* --- DARK MODE --- */
@@ -174,7 +174,7 @@ html[data-bs-theme="dark"] .listing-author *,
 html[data-bs-theme="dark"] .listing-date,
 html[data-bs-theme="dark"] .listing-date *{
   /* A lighter pink for better contrast on dark backgrounds */
-  color: #FF69B4 !important; 
+  color: #ffffff !important; 
 }         
 
 /*═════════════════════════════════════════════════════════════
@@ -188,8 +188,8 @@ html[data-bs-theme="dark"] .listing-date *{
 
 /* ── DARK MODE ──────────────────────────────────────────── */
 html[data-bs-theme="light"] .quarto-title .quarto-category {
-  background:   #A06084;
-  border: 1px solid rgba(0, 0, 0, .8) !important;
+  background:   #B77D9E;
+  border: 1px solid rgba(215, 215, 215, .5) !important;
   font-weight: bold!important;
 }
 html[data-bs-theme="light"]  .quarto-title .quarto-category a {
@@ -197,14 +197,14 @@ html[data-bs-theme="light"]  .quarto-title .quarto-category a {
   /* #FFB3DA */
 }
 html[data-bs-theme="light"]  .quarto-title .quarto-category:hover a {
-  color: #A06084 !important;
+  color: black !important;
   /* #FFB3DA */
 }
 html[data-bs-theme="light"] .quarto-category:hover,
 .quarto-categories .category:hover {
   transform: scale(1.06);
-  background: rgba(0, 0, 0, .65) !important;
-  box-shadow: 0 0 6px rgba(0, 0, 0, .7) !important;
+  background: rgba(247, 208, 230, .6) !important;
+  box-shadow: 0 0 6px rgba(255, 255, 255, .7) !important;
   transition: transform 0.2s ease;
 }
 
