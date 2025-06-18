@@ -28,7 +28,7 @@ html[data-bs-theme="dark"] body {
 }
 
 /*─────────────────────────────────────────────────────────────
-  TYPO/HEADER EFFECTS
+  HEADER EFFECTS
   ────────────────────────────────────────────────────────────*/
 /* TYPO/HEADER EFFECTS */
 .hover-letter, .hover-word{
@@ -53,6 +53,21 @@ html[data-bs-theme="dark"] body {
 .quarto-title .hover-word:hover,
 p.subtitle.lead .hover-word:hover{font-weight:normal}
 
+/* -------------------- Headers -------------------------- */
+html[data-bs-theme="light"] h1,
+html[data-bs-theme="light"] h1 .hover-letter{ color:#59414D!important; }
+html[data-bs-theme="light"] p,
+html[data-bs-theme="light"] p .hover-word{ color:#3E2D36!important; }
+html[data-bs-theme="light"] h2 { color:#4B3340 !important; }  /* h2 - posts page */
+html[data-bs-theme="light"] h5 { color:#4B3340 !important; }  /* h5 -categoies  */
+
+html[data-bs-theme="dark"]  h1,
+html[data-bs-theme="dark"]  h1 .hover-letter{ color:#F7D8EA!important; }
+html[data-bs-theme="dark"]  p,
+html[data-bs-theme="dark"]  p .hover-word{ color:#FFF2F9!important; }
+html[data-bs-theme="dark"]  h2 { color:#F1C0E2 !important; }
+html[data-bs-theme="dark"]  h5 { color:#F1C0E2 !important; }
+
 /* ============================================================
    FINAL NAVBAR LINK STYLING
    ============================================================ */
@@ -65,7 +80,7 @@ html[data-bs-theme="light"] nav.navbar a:not(#custom-theme-toggle):not(#custom-t
 }
 html[data-bs-theme="dark"] nav.navbar a:not(#custom-theme-toggle):not(#custom-theme-toggle *),
 html[data-bs-theme="dark"] nav.navbar a:not(#custom-theme-toggle):not(#custom-theme-toggle *) .bi {
-  color: #D4D4D4 !important;          /* <—- pick any dark-mode tint */
+  color: #FFF2F9 !important;          /* <—- pick any dark-mode tint */
 }
 html[data-bs-theme="light"] nav.navbar{background:#6b6b6b!important;}
 html[data-bs-theme="dark"]  nav.navbar{background:#878787!important;}
@@ -130,10 +145,7 @@ nav.navbar .nav-link[href*="mailto:"]:hover {
 }
 
 /*─────────────────────────────────────────────────────────────
-  BODY-TEXT tint for everything EXCEPT:
-  · category pills (.listing-category / .quarto-category)
-  · highlight badges  (.badge)
-  · inline <mark> highlights
+  -------------------- PROJECTS PAGE --------------------------
   ────────────────────────────────────────────────────────────*/
 
 html[data-bs-theme="light"] .quarto-post .listing-category,
@@ -147,6 +159,66 @@ html[data-bs-theme="dark"] .quarto-post .listing-title a,
 html[data-bs-theme="dark"] .quarto-post .listing-title a:visited{
   color: #FFEAF6 !important;
 }
+
+/* ------------- CATEGORIES -------------- */
+
+/* Sidebar category styling */
+html[data-bs-theme="light"] div.category {
+  color: #3E2D36 !important;
+  transition: all 0.25s ease;
+  display: block;
+  cursor: pointer;
+}
+html[data-bs-theme="dark"] div.category {
+  color: #FFEAF6 !important;
+  transition: all 0.25s ease;
+  display: block;
+  cursor: pointer;
+}
+/* Hover: underline + scale up */
+html[data-bs-theme="light"] div.category:hover {
+  text-decoration: underline;
+  font-weight: bold !important;
+}
+html[data-bs-theme="dark"] div.category:hover {
+  text-decoration: underline;
+  font-weight: bold !important;
+}
+/* Base category pill styling */
+html[data-bs-theme="light"] .listing-category {
+  font-weight: bold!important;
+  transition: all 0.25s ease;
+  background-color: rgba(255, 255, 255, .15);
+  border: .9px solid rgba(255, 255, 255, .4) !important;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+html[data-bs-theme="dark"] .listing-category {
+  font-weight: bold!important;
+  transition: all 0.25s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: .9px solid rgba(255, 255, 255, .6) !important;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+/* Hover effect: grow + pink */
+html[data-bs-theme="light"] .listing-category:hover {
+  transform: scale(1.08);
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 0 4px rgba(255, 255, 255, 0.7)   /* soft pink glow */
+}
+html[data-bs-theme="dark"] .listing-category:hover {
+  transform: scale(1.08);
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 0 4px rgba(255, 255, 255, 0.7)   /* soft pink glow */
+}
+
 /* =======================================================
    PROJECT CARD: Custom Subtitle & Description Colors
    ======================================================= */
@@ -161,7 +233,7 @@ html[data-bs-theme="light"] .listing-author *,
 html[data-bs-theme="light"] .listing-date,
 html[data-bs-theme="light"] .listing-date *{
   /* A vibrant, readable pink for light mode */
-  color: #101010 !important; 
+  color: #353535 !important; 
 }
 
 /* --- DARK MODE --- */
@@ -180,20 +252,22 @@ html[data-bs-theme="dark"] .listing-date *{
 /*═════════════════════════════════════════════════════════════
   INDIVIDUAL POST PAGES
 ═════════════════════════════════════════════════════════════*/
-/*═════════════════════════════════════════════════════════════
-  CATEGORY PILLS • *post pages only*
-  (listing grid pills keep their existing look)
-═════════════════════════════════════════════════════════════*/
-/*   targets .quarto-title  → appears only on full post page   */
+/* CATEGORY PILLS • *post pages only*
+  (listing grid pills keep their existing look) */
 
 /* ── DARK MODE ──────────────────────────────────────────── */
 html[data-bs-theme="light"] .quarto-title .quarto-category {
-  background:   #B77D9E;
-  border: 1px solid rgba(215, 215, 215, .5) !important;
   font-weight: bold!important;
+  transition: all 0.25s ease;
+  background-color: rgba(255, 255, 255, .15);
+  border: .9px solid rgba(255, 255, 255, .4) !important;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
 }
 html[data-bs-theme="light"]  .quarto-title .quarto-category a {
-  color: #1F1F1F !important;
+  color: #492739 !important;
   /* #FFB3DA */
 }
 html[data-bs-theme="light"]  .quarto-title .quarto-category:hover a {
@@ -211,7 +285,7 @@ html[data-bs-theme="light"] .quarto-category:hover,
 /* ── LIGHT MODE ───────────────────────────────────────────── */
 html[data-bs-theme="dark"]  .quarto-title .quarto-category {
   background:   rgba(255, 205, 233, .65);
-  border: 1px solid rgba(255, 255, 255, .8) !important;
+  border: 1px solid rgba(255, 255, 255, .4) !important;
   font-weight: bold!important;
 }
 html[data-bs-theme="dark"]  .quarto-title .quarto-category a {
@@ -241,8 +315,17 @@ html[data-bs-theme="dark"]
 /*═════════════════════════════════════════════════════════════
   2 ▸  BODY TEXT INSIDE EVERY .content-card BLOCK
 ═════════════════════════════════════════════════════════════*/
-html[data-bs-theme="light"]
-  .page-layout-article .content-card p,
+
+/* For light theme */
+html[data-bs-theme="light"] .page-layout-article .content-card blockquote {
+    color: #662848;
+}
+
+/* For dark theme */
+html[data-bs-theme="dark"] .page-layout-article .content-card blockquote {
+    color: #AA4B7E;
+} 
+
 html[data-bs-theme="light"]
   .page-layout-article .content-card li,
 html[data-bs-theme="light"]
@@ -252,8 +335,6 @@ html[data-bs-theme="light"]
 html[data-bs-theme="light"]
   .page-layout-article .content-card pre code{ color:#333333!important; }
 
-html[data-bs-theme="dark"]
-  .page-layout-article .content-card p,
 html[data-bs-theme="dark"]
   .page-layout-article .content-card li,
 html[data-bs-theme="dark"]
@@ -265,9 +346,9 @@ html[data-bs-theme="dark"]
 
 /* Optional: make *inline* links match the subtitle tint */
 html[data-bs-theme="light"]
-  .page-layout-article .content-card a             { color:#A56087!important; font-weight: bold;}
+  .page-layout-article .content-card a             { color:#662848!important; font-weight: bold;}
 html[data-bs-theme="dark"]
-  .page-layout-article .content-card a             { color:#FFBCE3!important; font-weight: bold;}
+  .page-layout-article .content-card a             { color:#AA4B7E!important; font-weight: bold;}
 
 /*═════════════════════════════════════════════════════════════
   3 ▸  SUBTITLE .content-card BLOCK
@@ -303,13 +384,66 @@ html[data-bs-theme="dark"]  mark {
 /*─────────────────────────────────────────────────────────────
   IMAGES  /  MODAL
   ────────────────────────────────────────────────────────────*/
-img[src*="profPic.webp"]{
+html[data-bs-theme="light"] img[src*="profPic.webp"]{
+  border-radius:50%;transition:transform .3s,box-shadow .3s;
+  box-shadow:0 10px 20px rgba(38,28,22,.2);
+}
+html[data-bs-theme="dark"] img[src*="profPic.webp"]{
   border-radius:50%;transition:transform .3s,box-shadow .3s;
   box-shadow:0 10px 20px rgba(255,255,255,.3);
 }
-img[src*="profPic.webp"]:hover{
+
+html[data-bs-theme="light"] img[src*="profPic.webp"]:hover{
+  transform:scale(1.1);
+  box-shadow:0 10px 20px rgba(38,28,22,.03),0 0 20px rgb(90,23,52);
+}
+html[data-bs-theme="dark"] img[src*="profPic.webp"]:hover{
   transform:scale(1.1);
   box-shadow:0 10px 20px rgba(255,255,255,.6),0 0 20px rgb(214,96,145);
+}
+
+html[data-bs-theme="light"] #image-modal-content {
+  position: relative;
+  max-width: 70vw;
+  max-height: 70vh;
+  border-radius: 0px;
+
+  /* START with white shadow */
+  box-shadow: 0 10px 30px rgba(38,28,22,.8);
+
+  transform: scale(0.95);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+html[data-bs-theme="dark"] #image-modal-content {
+  position: relative;
+  max-width: 70vw;
+  max-height: 70vh;
+  border-radius: 0px;
+
+  /* START with white shadow */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+
+  transform: scale(0.95);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+html[data-bs-theme="light"] #image-modal-content:hover {
+  transform: scale(1);
+
+  /* CHANGE to pink glow on hover */
+  box-shadow:
+    0 10px 20px rgba(38,28,22,.3),   /* soften black */
+    0 0 30px rgba(198, 44, 112, 0.7);       /* pink glow */
+  cursor: zoom-out;
+}
+html[data-bs-theme="dark"] #image-modal-content:hover {
+  transform: scale(1);
+
+  /* CHANGE to pink glow on hover */
+  box-shadow:
+    0 10px 20px rgba(255, 255, 255, 0.6),   /* soften black */
+    0 0 30px rgba(198, 44, 112, 0.7);       /* pink glow */
+  cursor: zoom-out;
 }
 
 /* Modal base styles */
@@ -330,29 +464,6 @@ img[src*="profPic.webp"]:hover{
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3); /* less dark */
-}
-
-#image-modal-content {
-  position: relative;
-  max-width: 70vw;
-  max-height: 70vh;
-  border-radius: 0px;
-
-  /* START with white shadow */
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
-
-  transform: scale(0.95);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#image-modal-content:hover {
-  transform: scale(1);
-
-  /* CHANGE to pink glow on hover */
-  box-shadow:
-    0 10px 20px rgba(255, 255, 255, 0.6),   /* soften black */
-    0 0 30px rgba(198, 44, 112, 0.7);       /* pink glow */
-  cursor: zoom-out;
 }
 
 /* -------------- SOCIAL ICONS --------------*/
@@ -435,41 +546,6 @@ div.list {
   transform: scale(1.035);
   text-decoration: underline;
 }
-
-/* ------------- CATEGORIES -------------- */
-
-/* Sidebar category styling */
-div.category {
-  transition: all 0.25s ease;
-  display: block;
-  cursor: pointer;
-}
-
-/* Hover: underline + scale up */
-div.category:hover {
-  text-decoration: underline;
-  font-weight: bold !important;
-}
-
-/* Base category pill styling */
-.listing-category {
-  transition: all 0.25s ease;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: .9px solid rgba(255, 255, 255, .6) !important;
-  display: inline-block;
-  cursor: pointer;
-  padding: 0.2rem 0.5rem;
-  border-radius: 6px;
-}
-
-/* Hover effect: grow + pink */
-.listing-category:hover {
-  transform: scale(1.08);
-  background-color: rgba(255, 255, 255, 0.4);
-  box-shadow:
-    0 0 4px rgba(255, 255, 255, 0.7)   /* soft pink glow */
-}
-
 /* ------------- BANNER -------------- */
 
 /* -------- Outermost Layer (flat corners) -------- */
@@ -515,7 +591,6 @@ div.category:hover {
   padding: 2rem;
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25) !important;
 }
-
 /* --------------- CURSOR GLOW ---------------- */
 
 /* Target the entire banner wrapper */
