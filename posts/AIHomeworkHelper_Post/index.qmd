@@ -1,0 +1,40 @@
+---
+title: "In Progress: AI Homework Helper"
+subtitle: |
+  Building an AI that will hopefully help me with my homework
+author: "Raameen Ahmed"
+date: "2025-06-18"
+categories: [In Progress]
+---
+
+::: {.content-card}
+
+> **Goals: Learn to use Flask for APIs, Learn React for front end, Learn NumPys and Pandas to handle my data for my AI**  
+>
+> I currently do not know React and know very basic Python ( haven't taken DSA yet but have been learning the concepts myself from YouTube and ChatGPT). However, I am taking two classes ( Calc 3 and Ethics ) and want to make a specialized AI **myself** that will make these classes ( and future classes ) less work. 
+
+> I predict it will take me about 1-2 months, but we shall see! I will record my progress down below, and then make a final post later on :)
+
+:::
+
+## ♡ Updates
+
+::: {.content-card}
+
+### June 18, 2025
+
+I will shortly begin working on an AI Homework Helper, I plan to integrate SWE and DS with this project. I will need to learn a lot abut how AIs function and behave along with back end logistics ( I've never worked with back end so bear with me ). I want to integrate ds by gathering input data and presenting them to the user ( their individual stats of some sort ) using pandas and numpy. This is still early ideas, I my change them with time.
+
+:::
+
+## ♡ AI Functions
+
+::: {.content-card}
+
+* Be able to find quotes in pdfs that the user uploads
+* Give the exact line, sentence number, or paragraph of said quote
+* Record frequency of topics the user asks questions on + display report
+* Record lengths of user's inputs and accuracy of AI's response ( ask user if answer was accurate ) -> does longer input = more accurate response ?
+* Use the data to tweak the AI to be more accurate
+
+:::

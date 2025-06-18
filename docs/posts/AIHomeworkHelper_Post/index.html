@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Raameen Ahmed, Muskan Ahmad, Malik Mustafa">
-<meta name="dcterms.date" content="2025-04-10">
+<meta name="author" content="Raameen Ahmed">
+<meta name="dcterms.date" content="2025-06-18">
 
-<title>Birth Data Analysis – Raameen Ahmed</title>
+<title>In Progress: AI Homework Helper – Raameen Ahmed</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -132,11 +132,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Birth Data Analysis</h1>
-            <p class="subtitle lead"></p><p>Building an <mark>R</mark> × <mark>tidyverse</mark> × <mark>ggplot2</mark> pipeline to model U.S. births (2016 – 2021)</p><p></p>
+      <h1 class="title">In Progress: AI Homework Helper</h1>
+            <p class="subtitle lead"></p><p>Building an AI that will hopefully help me with my homework</p><p></p>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Data Analysis</div>
-                <div class="quarto-category">Data Modeling</div>
+                <div class="quarto-category">In Progress</div>
               </div>
                   </div>
   </div>
@@ -147,14 +146,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Raameen Ahmed, Muskan Ahmad, Malik Mustafa </p>
+               <p>Raameen Ahmed </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 10, 2025</p>
+        <p class="date">June 18, 2025</p>
       </div>
     </div>
     
@@ -175,108 +174,30 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="content-card">
 <blockquote class="blockquote">
-<p><strong>How maternal education shapes fertility patterns and infant health across the United States (2016 – 2021).</strong></p>
-<p>We stitched together <strong>6 years of provisional NCHS records</strong> (≈ 20 M births), cleaned 1.2 GB of raw CSVs into a single tidy table, and fed it through a fully reproducible <mark>R</mark> × <mark>tidyverse</mark> workflow. The result is an interactive report that quantifies regional disparities, isolates key predictors, and pin-points policy levers for healthier outcomes.</p>
+<p><strong>Goals: Learn to use Flask for APIs, Learn React for front end, Learn NumPys and Pandas to handle my data for my AI</strong></p>
+<p>I currently do not know React and know very basic Python ( haven’t taken DSA yet but have been learning the concepts myself from YouTube and ChatGPT). However, I am taking two classes ( Calc 3 and Ethics ) and want to make a specialized AI <strong>myself</strong> that will make these classes ( and future classes ) less work.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>I predict it will take me about 1-2 months, but we shall see! I will record my progress down below, and then make a final post later on :)</p>
 </blockquote>
 </div>
-<hr>
-<section id="research-questions" class="level2">
-<h2 class="anchored" data-anchor-id="research-questions">♡ Research questions</h2>
-<div class="content-card">
-<ol type="1">
-<li><p><strong>Education → birth outcomes</strong><br>
-How does maternal schooling predict birth weight and maternal age across states and years?</p></li>
-<li><p><strong>Education → family size</strong><br>
-Are mothers with lower formal education more likely to have multiple children than highly-educated mothers?</p></li>
-</ol>
-</div>
-<hr>
+<section id="updates" class="level2">
+<h2 class="anchored" data-anchor-id="updates">♡ Updates</h2>
+<section id="june-18-2025" class="level3 content-card">
+<h3 class="anchored" data-anchor-id="june-18-2025">June 18, 2025</h3>
+<p>I will shortly begin working on an AI Homework Helper, I plan to integrate SWE and DS with this project. I will need to learn a lot abut how AIs function and behave along with back end logistics ( I’ve never worked with back end so bear with me ). I want to integrate ds by gathering input data and presenting them to the user ( their individual stats of some sort ) using pandas and numpy. This is still early ideas, I my change them with time.</p>
 </section>
-<section id="functions-methods" class="level2">
-<h2 class="anchored" data-anchor-id="functions-methods">♡ Functions &amp; methods</h2>
-<div class="content-card">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 73%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Stage</th>
-<th>Key tools &amp; notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Cleaning / prep</strong></td>
-<td><mark>readr::read_csv()</mark> · <mark>dplyr::mutate()</mark> / <mark>as_tibble()</mark> · <mark>na.omit()</mark></td>
-</tr>
-<tr class="even">
-<td><strong>Descriptive stats</strong></td>
-<td><mark>group_by()</mark> + <mark>summarise()</mark> for year-by-state aggregates</td>
-</tr>
-<tr class="odd">
-<td><strong>Inferential stats</strong></td>
-<td>One-way <mark>ANOVA</mark> (<mark>aov</mark>) + linear / interaction models (<mark>lm</mark>)</td>
-</tr>
-<tr class="even">
-<td><strong>Classification</strong></td>
-<td>Logistic <mark>glm</mark> predicting <strong>High_EDU</strong> (Bachelor’s +) from age &amp; birth-weight</td>
-</tr>
-<tr class="odd">
-<td><strong>Visualisation</strong></td>
-<td><mark>ggplot2</mark> bar / violin / scatter + <mark>facet_wrap()</mark> and <mark>geom_text_repel()</mark></td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
 </section>
-<section id="code-data" class="level2">
-<h2 class="anchored" data-anchor-id="code-data">♡ Code &amp; data</h2>
-<div class="content-card">
-<div class="js-hover-effect">
-<p><a href="https://github.com/raameena/Birth-Data-Analysis" target="_blank">GitHub Repository</a><br>
-<a href="https://www.kaggle.com/datasets/danbraswell/temporary-us-births" target="_blank">Kaggle dataset</a></p>
-</div>
-</div>
-<hr>
-</section>
-<section id="headline-findings" class="level2">
-<h2 class="anchored" data-anchor-id="headline-findings">♡ Headline findings</h2>
+<section id="ai-functions" class="level2">
+<h2 class="anchored" data-anchor-id="ai-functions">♡ AI Functions</h2>
 <div class="content-card">
 <ul>
-<li><p><strong>Education inversely tracks fertility.</strong><br>
-High-school-only and <em>some college</em> mothers account for most births, while PhD / MD holders delay childbirth and have fewer children overall.</p></li>
-<li><p><strong>Higher education ⇒ healthier babies.</strong><br>
-Each jump in schooling adds ≈ <strong>85 g</strong> to mean birth weight (<em>p</em> &lt; 0.001).</p></li>
-<li><p><strong>Age amplifies the effect.</strong><br>
-In the interaction model, every extra year of maternal age adds <strong>+41 g</strong> for PhD mothers but only <strong>+1 g</strong> for high-school drop-outs.</p></li>
-<li><p><strong>Regional split.</strong><br>
-New England &amp; the West host the most college-educated, older mothers; the Deep South clusters at younger ages &amp; lower schooling.</p></li>
+<li>Be able to find quotes in pdfs that the user uploads</li>
+<li>Give the exact line, sentence number, or paragraph of said quote</li>
+<li>Record frequency of topics the user asks questions on + display report</li>
+<li>Record lengths of user’s inputs and accuracy of AI’s response ( ask user if answer was accurate ) -&gt; does longer input = more accurate response ?</li>
+<li>Use the data to tweak the AI to be more accurate</li>
 </ul>
-</div>
-<hr>
-</section>
-<section id="policy-take-aways" class="level2">
-<h2 class="anchored" data-anchor-id="policy-take-aways">♡ Policy take-aways</h2>
-<div class="content-card">
-<ul>
-<li><p><strong>Education is a lever.</strong><br>
-Keeping women in school correlates with later, healthier births.</p></li>
-<li><p><strong>Target by geography.</strong><br>
-Southern states stand to gain most from prenatal-care subsidies and health-literacy programs.</p></li>
-<li><p><strong>Next steps.</strong><br>
-Add paternal education and local healthcare spend to explain the remaining variance.</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="full-report-pdf" class="level2">
-<h2 class="anchored" data-anchor-id="full-report-pdf">♡ Full report (PDF)</h2>
-<div class="content-card">
-<iframe src="BirthDataAnalysis.pdf" width="100%" height="600px">
-</iframe>
 </div>
 
 

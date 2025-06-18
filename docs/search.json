@@ -4,7 +4,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Personal Webpage\n\n\nBuilding a fully custom Quarto × HTML × CSS × JavaScript portfolio \n\n\n\nRStudio\n\n\nFront-End\n\n\n\n\n\n\n\n\n\nJun 14, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nBirth Data Analysis\n\n\nBuilding an R × tidyverse × ggplot2 pipeline to model U.S. births (2016 – 2021) \n\n\n\nData Analysis\n\n\nData Modeling\n\n\n\n\n\n\n\n\n\nApr 10, 2025\n\n\nRaameen Ahmed, Muskan Ahmad, Malik Mustafa\n\n\n\n\n\n\n\n\n\n\n\n\nSearch System\n\n\nBuilding a C++ × STL × CLI engine for instant look-ups on all 50 U.S. states \n\n\n\nAlgorithms\n\n\nCommand-Line\n\n\n\n\n\n\n\n\n\nDec 10, 2024\n\n\nRaameen Ahmed\n\n\n\n\n\n\nNo matching items"
+    "text": "In Progress: AI Homework Helper\n\n\nBuilding an AI that will hopefully help me with my homework \n\n\n\nIn Progress\n\n\n\n\n\n\n\n\n\nJun 18, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nPersonal Webpage\n\n\nBuilding a fully custom Quarto × HTML × CSS × JavaScript portfolio \n\n\n\nRStudio\n\n\nFront-End\n\n\n\n\n\n\n\n\n\nJun 14, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nBirth Data Analysis\n\n\nBuilding an R × tidyverse × ggplot2 pipeline to model U.S. births (2016 – 2021) \n\n\n\nData Analysis\n\n\nData Modeling\n\n\n\n\n\n\n\n\n\nApr 10, 2025\n\n\nRaameen Ahmed, Muskan Ahmad, Malik Mustafa\n\n\n\n\n\n\n\n\n\n\n\n\nSearch System\n\n\nBuilding a C++ × STL × CLI engine for instant look-ups on all 50 U.S. states \n\n\n\nAlgorithms\n\n\nCommand-Line\n\n\n\n\n\n\n\n\n\nDec 10, 2024\n\n\nRaameen Ahmed\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/PersonalWebpage_Post/index.html",
@@ -130,7 +130,7 @@
     "href": "posts/BirthDataAnalysis_Post/index.html#policy-take-aways",
     "title": "Birth Data Analysis",
     "section": "♡ Policy take-aways",
-    "text": "♡ Policy take-aways\n\n\nEducation is a lever.\nKeeping women in school correlates with later, healthier births.\nTarget by geography.\nSouthern states stand to gain most from prenatal-care subsidies and health-literacy programmes.\nNext steps.\nAdd paternal education and local healthcare spend to explain the remaining variance."
+    "text": "♡ Policy take-aways\n\n\nEducation is a lever.\nKeeping women in school correlates with later, healthier births.\nTarget by geography.\nSouthern states stand to gain most from prenatal-care subsidies and health-literacy programs.\nNext steps.\nAdd paternal education and local healthcare spend to explain the remaining variance."
   },
   {
     "objectID": "posts/BirthDataAnalysis_Post/index.html#full-report-pdf",
@@ -138,5 +138,33 @@
     "title": "Birth Data Analysis",
     "section": "♡ Full report (PDF)",
     "text": "♡ Full report (PDF)"
+  },
+  {
+    "objectID": "posts/AIHomeworkHelper_Post/index.html",
+    "href": "posts/AIHomeworkHelper_Post/index.html",
+    "title": "In Progress: AI Homework Helper",
+    "section": "",
+    "text": "Goals: Learn to use Flask for APIs, Learn React for front end, Learn NumPys and Pandas to handle my data for my AI\nI currently do not know React and know very basic Python ( haven’t taken DSA yet but have been learning the concepts myself from YouTube and ChatGPT). However, I am taking two classes ( Calc 3 and Ethics ) and want to make a specialized AI myself that will make these classes ( and future classes ) less work.\n\n\nI predict it will take me about 1-2 months, but we shall see! I will record my progress down below, and then make a final post later on :)"
+  },
+  {
+    "objectID": "posts/AIHomeworkHelper_Post/index.html#rough-ideas",
+    "href": "posts/AIHomeworkHelper_Post/index.html#rough-ideas",
+    "title": "In Progress: AI Homework Helper",
+    "section": "♡ Rough Ideas",
+    "text": "♡ Rough Ideas\n\nJune 18, 2025\nI will shortly begin working on an AI Homework Helper, I plan to integrate SWE and DS with this project. I will need to learn a lot abut how AIs function and behave along with back end logistics ( I’ve never worked with back end so bear with me ). I want to integrate ds by gathering input data and presenting them to the user ( their individual stats of some sort ) using pandas and numpy. This is still early ideas, I my change them with time."
+  },
+  {
+    "objectID": "posts/AIHomeworkHelper_Post/index.html#updates",
+    "href": "posts/AIHomeworkHelper_Post/index.html#updates",
+    "title": "In Progress: AI Homework Helper",
+    "section": "♡ Updates",
+    "text": "♡ Updates\n\nJune 18, 2025\nI will shortly begin working on an AI Homework Helper, I plan to integrate SWE and DS with this project. I will need to learn a lot abut how AIs function and behave along with back end logistics ( I’ve never worked with back end so bear with me ). I want to integrate ds by gathering input data and presenting them to the user ( their individual stats of some sort ) using pandas and numpy. This is still early ideas, I my change them with time."
+  },
+  {
+    "objectID": "posts/AIHomeworkHelper_Post/index.html#ai-functions",
+    "href": "posts/AIHomeworkHelper_Post/index.html#ai-functions",
+    "title": "In Progress: AI Homework Helper",
+    "section": "♡ AI Functions",
+    "text": "♡ AI Functions\n\n\nBe able to find quotes in pdfs that the user uploads\nGive the exact line, sentence number, or paragraph of said quote\nRecord frequency of topics the user asks questions on + display report\nRecord lengths of user’s inputs and accuracy of AI’s response ( ask user if answer was accurate ) -&gt; does longer input = more accurate response ?\nUse the data to tweak the AI to be more accurate"
   }
 ]

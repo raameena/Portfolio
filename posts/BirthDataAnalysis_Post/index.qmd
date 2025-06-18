@@ -93,7 +93,7 @@ categories: [Data Analysis, Data Modeling]
 
 * **Target by geography.**  
   Southern states stand to gain most from prenatal-care subsidies and
-  health-literacy programmes.
+  health-literacy programs.
 
 * **Next steps.**  
   Add paternal education and local healthcare spend to explain the remaining
