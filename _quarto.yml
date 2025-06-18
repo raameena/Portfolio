@@ -25,7 +25,7 @@ website:
 
       # Item 3: Email Icon
       - icon: envelope
-        href: "mailto:raameenahmed1@gmail.com"
+        href: "https://mail.google.com/mail/?view=cm&to=raameenahmed1@gmail.com"
         target: "_blank"
 
       # Item 4: The Search Bar
