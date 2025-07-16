@@ -1,0 +1,117 @@
+---
+title: "Detroit 911 Calls & Hospital Proximity Research"
+subtitle: |
+  Exploring spatial correlation between 911 call density and hospital locations  
+  in Wayne County using <mark>MySQL</mark> × <mark>Python</mark> × <mark>R</mark>
+author: "Raameen Ahmed"
+date: "2025-06-29"
+categories: [SQL, MySQL, Python, R, Data Engineering, Spatial Analysis, Public Health]
+---
+
+::: {.content-card}
+
+> **Research Question:** Is there a statistical spatial correlation between 911 call density (2018–2025) and proximity to hospitals in Wayne County?  
+> **Approach:** Transform 2M+ raw calls → clean database → spatial analysis → healthcare planning insights.
+
+:::
+
+## ♡️ Research Framework
+
+::: {.content-card}
+
+**Hypotheses:**
+- **H₀ (Null):** No significant spatial correlation between hospital locations and 911 call density
+- **H₁ (Alternative):** Positive correlation between 911 call density and hospital proximity
+
+**Data Sources:**
+- Detroit Open Data Portal (911 calls, 2018–2025)
+- US Census Bureau 5-Year Estimates (population, demographics)
+- Wayne County ZCTA mapping data
+
+:::
+
+## ♡️ Tech stack
+
+::: {.content-card}
+
+| Layer            | Tools & Notes                                                  |
+|------------------|----------------------------------------------------------------|
+| **Database**     | <mark>MySQL</mark> 8.0+ with centralized staging table        |
+| **ETL**          | Modular SQL scripts for cleaning, enrichment, modeling         |
+| **Analysis**     | <mark>Python</mark> (pandas, matplotlib, numpy) + <mark>R</mark> (planned) |
+| **Import/Export**| TablePlus for bulk imports, SQL <mark>SELECT ... INTO OUTFILE</mark> for exports |
+| **Dev tools**    | VS Code, Jupyter Notebook, TablePlus, Git & GitHub            |
+
+:::
+
+## ♡️ Project structure
+
+::: {.content-card}
+
+```
+911Calls-ResearchProject/
+├── Data Import:Export Process/
+│   ├── Specialized Tables/
+│   │   ├── 911CallLocations.csv
+│   │   ├── mostCallTypesLocations.csv
+│   │   └── mostShootingLocations.csv
+│   ├── data_export_process.sql
+│   └── data_import_process.md
+├── Initial Attempts/
+│   └── initial_sqlite_attempt.sql
+├── MySQL/
+│   ├── 01_schema_definition.sql
+│   ├── 02_data_cleaning_and_enrichment.sql
+│   ├── 03_data_modeling.sql
+│   └── 04_analysis_queries.sql
+├── Python Visuals/
+│   ├── 911CallsAnalysis.ipynb
+│   └── Datasets/
+│       ├── 2022FiveYearEstimate.csv
+│       ├── 2023FiveYearEstimate.csv
+│       ├── 911CallLocations.csv
+│       ├── mostCallTypesLocations.csv
+│       └── mostShootingLocations.csv
+├── R/
+│   └── (future R scripts)
+└── README.md
+```
+
+:::
+
+## ♡ Key highlights
+
+::: {.content-card}
+
+* **Centralized Data Hub:** MySQL database consolidates 2M+ 911 calls and Census demographic data for reproducible analysis
+* **Modular ETL Pipeline:** Automated data cleaning, enrichment, and specialized table creation via SQL scripts
+* **Multi-Format Analysis:** Python notebooks for exploration + planned R visualizations for spatial analysis
+* **Research-Driven:** Focused on demand-side factors in hospital location planning using emergency call data as proxy
+
+:::
+
+## ♡ Current progress
+
+::: {.content-card}
+
+**Completed:**
+
+- Research question and hypothesis formulation
+
+- Literature review on hospital location factors
+
+- Database architecture and data import pipeline
+
+- Python analysis setup with Census data integration
+
+**Next Steps:**
+
+- Data cleaning and validation
+
+- Spatial analysis with hospital location mapping
+
+- Statistical correlation testing
+
+- Heatmap visualization of call density vs. hospital proximity
+
+:::

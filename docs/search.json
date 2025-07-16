@@ -4,7 +4,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Building an AI-Powered Learning Assistant\n\n\nA full-stack application leveraging generative AI for homework help, with an integrated data science module to analyze and understand learning patterns. \n\n\n\nSoftware Engineering\n\n\nData Science\n\n\n\n\n\n\n\n\n\nJun 18, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nPersonal Webpage\n\n\nBuilding a fully custom Quarto × HTML × CSS × JavaScript portfolio \n\n\n\nRStudio\n\n\nFront-End\n\n\n\n\n\n\n\n\n\nJun 14, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nBirth Data Analysis\n\n\nBuilding an R × tidyverse × ggplot2 pipeline to model U.S. births (2016 – 2021) \n\n\n\nData Analysis\n\n\nData Modeling\n\n\n\n\n\n\n\n\n\nApr 10, 2025\n\n\nRaameen Ahmed, Muskan Ahmad, Malik Mustafa\n\n\n\n\n\n\n\n\n\n\n\n\nSearch System\n\n\nBuilding a C++ × STL × CLI engine for instant look-ups on all 50 U.S. states \n\n\n\nAlgorithms\n\n\nCommand-Line\n\n\n\n\n\n\n\n\n\nDec 10, 2024\n\n\nRaameen Ahmed\n\n\n\n\n\n\nNo matching items"
+    "text": "Detroit 911 Calls & Hospital Proximity Research\n\n\nExploring spatial correlation between 911 call density and hospital locations in Wayne County using MySQL × Python × R \n\n\n\nSQL\n\n\nMySQL\n\n\nPython\n\n\nR\n\n\nData Engineering\n\n\nSpatial Analysis\n\n\nPublic Health\n\n\n\n\n\n\n\n\n\nJun 29, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding an AI-Powered Learning Assistant\n\n\nA full-stack application leveraging generative AI for homework help, with an integrated data science module to analyze and understand learning patterns. \n\n\n\nSoftware Engineering\n\n\nData Science\n\n\n\n\n\n\n\n\n\nJun 18, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nPersonal Webpage\n\n\nBuilding a fully custom Quarto × HTML × CSS × JavaScript portfolio \n\n\n\nRStudio\n\n\nFront-End\n\n\n\n\n\n\n\n\n\nJun 14, 2025\n\n\nRaameen Ahmed\n\n\n\n\n\n\n\n\n\n\n\n\nBirth Data Analysis\n\n\nBuilding an R × tidyverse × ggplot2 pipeline to model U.S. births (2016 – 2021) \n\n\n\nData Analysis\n\n\nData Modeling\n\n\n\n\n\n\n\n\n\nApr 10, 2025\n\n\nRaameen Ahmed, Muskan Ahmad, Malik Mustafa\n\n\n\n\n\n\n\n\n\n\n\n\nSearch System\n\n\nBuilding a C++ × STL × CLI engine for instant look-ups on all 50 U.S. states \n\n\n\nAlgorithms\n\n\nCommand-Line\n\n\n\n\n\n\n\n\n\nDec 10, 2024\n\n\nRaameen Ahmed\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/PersonalWebpage_Post/index.html",
@@ -172,41 +172,90 @@
     "href": "posts/AIHomeworkHelper_Post/index.html#project-blueprint",
     "title": "Building an AI-Powered Learning Assistant",
     "section": "♡ Project Blueprint",
-    "text": "♡ Project Blueprint\n\nThis project is an exercise in both full-stack software engineering and applied data science. The architecture is designed to be modular, allowing for robust features and insightful analytics."
+    "text": "♡ Project Blueprint\n\nThis project is an exercise in both full-stack software engineering and applied AI. The architecture is designed to be modular, allowing for robust features and intelligent tutoring capabilities."
   },
   {
     "objectID": "posts/AIHomeworkHelper_Post/index.html#case-study-implementation",
     "href": "posts/AIHomeworkHelper_Post/index.html#case-study-implementation",
     "title": "Building an AI-Powered Learning Assistant",
     "section": "♡ Case Study & Implementation",
-    "text": "♡ Case Study & Implementation\n\nThis section will be updated with detailed write-ups as major milestones are completed.\n\nMilestone 1: Backend API & Database Architecture\n(Details on setting up the Flask API, defining endpoints, and designing the PostgreSQL schema will go here…)\n\n\nMilestone 2: Core Frontend Development in React\n(Details on building the user interface components, managing state, and connecting to the backend API will go here…)\n\n\nMilestone 3: Data Analytics Module Implementation\n(Details on the data pipeline, SQL queries, Pandas transformations, and the creation of visualizations will go here…)"
+    "text": "♡ Case Study & Implementation\n\n\nMilestone 1: Backend API & AI Integration ✅\nCompleted: Successfully implemented a comprehensive Flask backend with Google Generative AI integration. The system features:\n\nIntelligent Query Processing: Multi-module architecture that classifies, translates, and processes user queries\nStep-by-Step Tutoring: AI-powered explanations that adapt based on user preferences (with/without detailed steps)\nSpecialized Math Handling: Dedicated algebra solver with Wolfram Alpha integration for computational solutions\nModular Design: Clean separation of concerns with specialized handlers for different query types\n\nTechnical Highlights: - Integrated Google’s Gemini Pro model for natural language processing - Implemented query classification system for optimal AI response generation - Built translation layer for improved query understanding - Created flexible tutoring system that respects user preferences for explanation depth\n\n\nMilestone 2: Core Frontend Development in React 🚧\nIn Progress: Developing React frontend with modern UI/UX principles for seamless user interaction.\nPlanned Features: - Real-time chat interface for AI interactions - Math equation rendering and input capabilities - Responsive design for mobile and desktop - User preference settings for explanation depth\n\n\nMilestone 3: Data Analytics Module Implementation 📋\nPlanned: Comprehensive data science pipeline for learning analytics and user insights.\nFeatures to Implement: - User query pattern analysis - Learning progress tracking - Performance analytics dashboard - Predictive modeling for user satisfaction"
   },
   {
     "objectID": "posts/AIHomeworkHelper_Post/index.html#current-status",
     "href": "posts/AIHomeworkHelper_Post/index.html#current-status",
     "title": "Building an AI-Powered Learning Assistant",
     "section": "♡ Current Status",
-    "text": "♡ Current Status\n\n(As of June 18, 2025)\nThe project is in the initial planning and architecture phase. The primary focus is on defining the database schema and developing the core API endpoints for user interaction and PDF processing.\nNext Steps: 1. Implement the initial Flask application structure and database models. 2. Begin development of the primary React components for the user interface."
+    "text": "♡ Current Status\n\n(As of January 2025)\nThe project has successfully completed its core backend development phase with a fully functional AI-powered tutoring system. The modular architecture is in place and ready for frontend integration.\nCompleted:\n\n✅ Flask backend with Google AI integration\n✅ Modular query processing system\n✅ Step-by-step tutoring functionality\n✅ Specialized math handling modules\n✅ Query classification and translation\n\nIn Progress:\n\n🚧 React frontend development\n🚧 User interface design and implementation\n\nNext Steps:\n\nComplete React frontend with modern UI/UX\nExpand algebra_solver.py with additional algorithms\nImplement PostgreSQL database for data persistence\nDevelop analytics dashboard with Pandas/Plotly\nAdd user feedback and satisfaction prediction systems\n\nTimeline Update: The project is progressing well within the original 1-2 month timeline, with core AI functionality complete and frontend development underway."
   },
   {
     "objectID": "posts/AIHomeworkHelper_Post/index.html#executive-summary",
     "href": "posts/AIHomeworkHelper_Post/index.html#executive-summary",
     "title": "Building an AI-Powered Learning Assistant",
     "section": "♡ Executive Summary",
-    "text": "♡ Executive Summary\n\nHomework Helper AI is a full-stack application designed to assist students by leveraging large language models. Built with a Python/Flask backend and a React frontend, the project also features a comprehensive data science module that analyzes user query patterns in real-time to provide insights into learning behaviors. The goal is to create not just a helpful tool, but a system that learns about learning itself."
+    "text": "♡ Executive Summary\n\nAI-HW-Helper is a full-stack application designed to assist students by leveraging Google’s Generative AI for intelligent homework assistance. Built with a Python/Flask backend and a React frontend, the project features a modular architecture with specialized modules for query classification, translation, and step-by-step tutoring. The goal is to create not just a helpful tool, but a system that provides personalized learning experiences through intelligent problem-solving guidance."
   },
   {
     "objectID": "posts/AIHomeworkHelper_Post/index.html#tech-stack",
     "href": "posts/AIHomeworkHelper_Post/index.html#tech-stack",
     "title": "Building an AI-Powered Learning Assistant",
     "section": "♡ Tech Stack",
-    "text": "♡ Tech Stack\n\n\nFrontend: React, CSS3, HTML5\nBackend: Python, Flask\nDatabase: PostgreSQL (for storing user queries and application data)\nData Science: Pandas, NumPy, Scikit-learn, Plotly\nDeployment: Vercel (Frontend), Heroku/Render (Backend & Database)"
+    "text": "♡ Tech Stack\n\n\nFrontend: React, CSS3, HTML5\nBackend: Python, Flask\nAI Integration: Google Generative AI (Gemini Pro)\nMath Computation: Wolfram Alpha API\nDatabase: PostgreSQL (planned for storing user queries and application data)\nData Science: Pandas, NumPy, Scikit-learn, Plotly (planned)\nDeployment: Vercel (Frontend), Heroku/Render (Backend & Database)"
   },
   {
     "objectID": "posts/AIHomeworkHelper_Post/index.html#core-features-roadmap",
     "href": "posts/AIHomeworkHelper_Post/index.html#core-features-roadmap",
     "title": "Building an AI-Powered Learning Assistant",
     "section": "♡ Core Features & Roadmap",
-    "text": "♡ Core Features & Roadmap\n\n\nAI-Powered PDF Analysis (SWE): Develop a backend service that allows users to upload PDF documents and ask questions about their content, receiving precise answers with source citations.\nUser Interaction Dashboard (SWE/DS): Create a user-facing dashboard that visualizes their personal usage statistics, such as most frequent topics and query history, using data processed by Pandas and visualized with a library like Plotly.\nUsage Analytics & Insight Engine (DS): Build an admin-facing analytics module to analyze aggregated, anonymized user data. The initial goal is to model the relationship between query characteristics (e.g., length, topic) and the AI’s response quality.\nPredictive Quality Monitoring (DS): Implement a user feedback mechanism (e.g., “was this answer helpful?”) to create a labeled dataset. Use this to train a Scikit-learn classification model that can predict a user’s satisfaction with an answer before they even rate it."
+    "text": "♡ Core Features & Roadmap\n\n\n✅ Completed Features\n\nAI-Powered Math Tutoring (SWE): Developed a comprehensive backend service that processes user math queries and provides step-by-step explanations using Google’s Generative AI. The system includes intelligent query classification and translation modules.\nModular Backend Architecture (SWE): Built a robust Flask application with specialized modules:\n\ntutor.py: Handles AI-generated tutoring responses with step-by-step explanations\nquery_classifier.py: Classifies user queries for appropriate handling\nquery_translator.py: Translates queries for better AI processing\nalgebra_solver.py: Dedicated module for algebraic problem-solving\ngeneral_handler.py: Manages general query processing\nhistory_handler.py: Tracks user interaction history\nwolfram_api_solver.py: Integration with Wolfram Alpha for computational solutions\n\n\n\n\n🚧 In Progress\n\nFrontend User Interface (SWE): Currently developing React components for an intuitive user experience with real-time AI interactions.\nEnhanced Algebra Solver (SWE): Expand algebra_solver.py with additional algorithms for complex mathematical operations, equation solving, and symbolic computation.\nUser Interaction Dashboard (SWE/DS): Create a user-facing dashboard that visualizes personal usage statistics, query history, and learning progress using data processed by Pandas and visualized with Plotly.\nUsage Analytics & Insight Engine (DS): Build an admin-facing analytics module to analyze aggregated, anonymized user data to understand learning patterns and query characteristics.\nPredictive Quality Monitoring (DS): Implement user feedback mechanisms and satisfaction prediction using Scikit-learn classification models.\nDatabase Integration (SWE): Implement PostgreSQL database for persistent storage of user queries, interaction history, and analytics data."
+  },
+  {
+    "objectID": "posts/911CallsResearch_Post/index.html",
+    "href": "posts/911CallsResearch_Post/index.html",
+    "title": "Detroit 911 Calls & Hospital Proximity Research",
+    "section": "",
+    "text": "Research Question: Is there a statistical spatial correlation between 911 call density (2018–2025) and proximity to hospitals in Wayne County?\nApproach: Transform 2M+ raw calls → clean database → spatial analysis → healthcare planning insights."
+  },
+  {
+    "objectID": "posts/911CallsResearch_Post/index.html#tech-stack",
+    "href": "posts/911CallsResearch_Post/index.html#tech-stack",
+    "title": "Detroit 911 Calls & Hospital Proximity Research",
+    "section": "♡️ Tech stack",
+    "text": "♡️ Tech stack\n\n\n\n\n\n\n\n\nLayer\nTools & Notes\n\n\n\n\nDatabase\nMySQL 8.0+ with centralized staging table\n\n\nETL\nModular SQL scripts for cleaning, enrichment, modeling\n\n\nAnalysis\nPython (pandas, matplotlib, numpy) + R (planned)\n\n\nImport/Export\nTablePlus for bulk imports, SQL SELECT … INTO OUTFILE for exports\n\n\nDev tools\nVS Code, Jupyter Notebook, TablePlus, Git & GitHub"
+  },
+  {
+    "objectID": "posts/911CallsResearch_Post/index.html#project-structure",
+    "href": "posts/911CallsResearch_Post/index.html#project-structure",
+    "title": "Detroit 911 Calls & Hospital Proximity Research",
+    "section": "♡️ Project structure",
+    "text": "♡️ Project structure\n\n911Calls-ResearchProject/\n├── Data Import:Export Process/\n│   ├── Specialized Tables/\n│   │   ├── 911CallLocations.csv\n│   │   ├── mostCallTypesLocations.csv\n│   │   └── mostShootingLocations.csv\n│   ├── data_export_process.sql\n│   └── data_import_process.md\n├── Initial Attempts/\n│   └── initial_sqlite_attempt.sql\n├── MySQL/\n│   ├── 01_schema_definition.sql\n│   ├── 02_data_cleaning_and_enrichment.sql\n│   ├── 03_data_modeling.sql\n│   └── 04_analysis_queries.sql\n├── Python Visuals/\n│   ├── 911CallsAnalysis.ipynb\n│   └── Datasets/\n│       ├── 2022FiveYearEstimate.csv\n│       ├── 2023FiveYearEstimate.csv\n│       ├── 911CallLocations.csv\n│       ├── mostCallTypesLocations.csv\n│       └── mostShootingLocations.csv\n├── R/\n│   └── (future R scripts)\n└── README.md"
+  },
+  {
+    "objectID": "posts/911CallsResearch_Post/index.html#key-highlights",
+    "href": "posts/911CallsResearch_Post/index.html#key-highlights",
+    "title": "Detroit 911 Calls & Hospital Proximity Research",
+    "section": "♡ Key highlights",
+    "text": "♡ Key highlights\n\n\nCentralized Data Hub: MySQL database consolidates 2M+ 911 calls and Census demographic data for reproducible analysis\nModular ETL Pipeline: Automated data cleaning, enrichment, and specialized table creation via SQL scripts\nMulti-Format Analysis: Python notebooks for exploration + planned R visualizations for spatial analysis\nResearch-Driven: Focused on demand-side factors in hospital location planning using emergency call data as proxy"
+  },
+  {
+    "objectID": "posts/911CallsResearch_Post/index.html#next-steps",
+    "href": "posts/911CallsResearch_Post/index.html#next-steps",
+    "title": "Detroit 911 Call Data Analysis (2018–2025)",
+    "section": "♡ Next steps",
+    "text": "♡ Next steps\n\n\nRun 03_specialized_tables.sql to generate focused subsets (fire, overdose, etc.).\nExport each to CSV (SELECT … INTO OUTFILE) and load in RStudio with readr::read_csv().\n\nPerform EDA: summary stats via dplyrggplot2&lt;/mark\nDeploy interactive dashboards (Shiny/GitHub Pages) for stakeholder review."
+  },
+  {
+    "objectID": "posts/911CallsResearch_Post/index.html#research-framework",
+    "href": "posts/911CallsResearch_Post/index.html#research-framework",
+    "title": "Detroit 911 Calls & Hospital Proximity Research",
+    "section": "♡️ Research Framework",
+    "text": "♡️ Research Framework\n\nHypotheses: - H₀ (Null): No significant spatial correlation between hospital locations and 911 call density - H₁ (Alternative): Positive correlation between 911 call density and hospital proximity\nData Sources: - Detroit Open Data Portal (911 calls, 2018–2025) - US Census Bureau 5-Year Estimates (population, demographics) - Wayne County ZCTA mapping data"
+  },
+  {
+    "objectID": "posts/911CallsResearch_Post/index.html#current-progress",
+    "href": "posts/911CallsResearch_Post/index.html#current-progress",
+    "title": "Detroit 911 Calls & Hospital Proximity Research",
+    "section": "♡ Current progress",
+    "text": "♡ Current progress\n\nCompleted:\n\nResearch question and hypothesis formulation\nLiterature review on hospital location factors\nDatabase architecture and data import pipeline\nPython analysis setup with Census data integration\n\nNext Steps:\n\nData cleaning and validation\nSpatial analysis with hospital location mapping\nStatistical correlation testing\nHeatmap visualization of call density vs. hospital proximity"
   }
 ]

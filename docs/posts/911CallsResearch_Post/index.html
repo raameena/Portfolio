@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Raameen Ahmed">
-<meta name="dcterms.date" content="2024-12-10">
+<meta name="dcterms.date" content="2025-06-29">
 
-<title>Search System – Raameen Ahmed</title>
+<title>Detroit 911 Calls &amp; Hospital Proximity Research – Raameen Ahmed</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -132,11 +132,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Search System</h1>
-            <p class="subtitle lead"></p><p>Building a <mark>C++</mark> × <mark>STL</mark> × <mark>CLI</mark> engine for instant look-ups on all 50 U.S. states</p><p></p>
+      <h1 class="title">Detroit 911 Calls &amp; Hospital Proximity Research</h1>
+            <p class="subtitle lead"></p><p>Exploring spatial correlation between 911 call density and hospital locations in Wayne County using <mark>MySQL</mark> × <mark>Python</mark> × <mark>R</mark></p><p></p>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Algorithms</div>
-                <div class="quarto-category">Command-Line</div>
+                <div class="quarto-category">SQL</div>
+                <div class="quarto-category">MySQL</div>
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Data Engineering</div>
+                <div class="quarto-category">Spatial Analysis</div>
+                <div class="quarto-category">Public Health</div>
               </div>
                   </div>
   </div>
@@ -154,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 10, 2024</p>
+        <p class="date">June 29, 2025</p>
       </div>
     </div>
     
@@ -170,11 +175,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#what-problem-does-it-solve" id="toc-what-problem-does-it-solve" class="nav-link active" data-scroll-target="#what-problem-does-it-solve">♡ What problem does it solve?</a></li>
-  <li><a href="#tech-stack" id="toc-tech-stack" class="nav-link" data-scroll-target="#tech-stack">♡ Tech stack</a></li>
-  <li><a href="#key-features" id="toc-key-features" class="nav-link" data-scroll-target="#key-features">♡ Key features</a></li>
-  <li><a href="#sample-session" id="toc-sample-session" class="nav-link" data-scroll-target="#sample-session">♡ Sample session</a></li>
-  <li><a href="#code-data" id="toc-code-data" class="nav-link" data-scroll-target="#code-data">♡ Code &amp; data</a></li>
+  <li><a href="#research-framework" id="toc-research-framework" class="nav-link active" data-scroll-target="#research-framework">♡️ Research Framework</a></li>
+  <li><a href="#tech-stack" id="toc-tech-stack" class="nav-link" data-scroll-target="#tech-stack">♡️ Tech stack</a></li>
+  <li><a href="#project-structure" id="toc-project-structure" class="nav-link" data-scroll-target="#project-structure">♡️ Project structure</a></li>
+  <li><a href="#key-highlights" id="toc-key-highlights" class="nav-link" data-scroll-target="#key-highlights">♡ Key highlights</a></li>
+  <li><a href="#current-progress" id="toc-current-progress" class="nav-link" data-scroll-target="#current-progress">♡ Current progress</a></li>
   </ul>
 </nav>
     </div>
@@ -187,32 +192,24 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="content-card">
 <blockquote class="blockquote">
-<p><strong>How do you find any fact about any state in one keystroke?</strong></p>
-<p>My very first <mark>C++</mark> project: a lightweight, terminal-based search system that parses a 50-row CSV, indexes every field in memory, and serves <mark>O(log n)</mark> look-ups via binary search.</p>
+<p><strong>Research Question:</strong> Is there a statistical spatial correlation between 911 call density (2018–2025) and proximity to hospitals in Wayne County?<br>
+<strong>Approach:</strong> Transform 2M+ raw calls → clean database → spatial analysis → healthcare planning insights.</p>
 </blockquote>
 </div>
-<hr>
-<section id="what-problem-does-it-solve" class="level2">
-<h2 class="anchored" data-anchor-id="what-problem-does-it-solve">♡ What problem does it solve?</h2>
+<section id="research-framework" class="level2">
+<h2 class="anchored" data-anchor-id="research-framework">♡️ Research Framework</h2>
 <div class="content-card">
-<ul>
-<li><p><strong>Centralises state facts.</strong><br>
-No more scrolling through Wikipedia tables — query <em>statehood year</em>, <em>capital</em>, <em>area</em> or <em>abbreviation</em> from one prompt.</p></li>
-<li><p><strong>Teaches core CS.</strong><br>
-Hands-on practice with file-I/O, structs, vectors, sorting &amp; searching algorithms.</p></li>
-<li><p><strong>Runs everywhere.</strong><br>
-Pure <mark>C++17</mark>, single executable, &lt; 100 KB binary.</p></li>
-</ul>
+<p><strong>Hypotheses:</strong> - <strong>H₀ (Null):</strong> No significant spatial correlation between hospital locations and 911 call density - <strong>H₁ (Alternative):</strong> Positive correlation between 911 call density and hospital proximity</p>
+<p><strong>Data Sources:</strong> - Detroit Open Data Portal (911 calls, 2018–2025) - US Census Bureau 5-Year Estimates (population, demographics) - Wayne County ZCTA mapping data</p>
 </div>
-<hr>
 </section>
 <section id="tech-stack" class="level2">
-<h2 class="anchored" data-anchor-id="tech-stack">♡ Tech stack</h2>
+<h2 class="anchored" data-anchor-id="tech-stack">♡️ Tech stack</h2>
 <div class="content-card">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 83%">
+<col style="width: 21%">
+<col style="width: 78%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -222,71 +219,88 @@ Pure <mark>C++17</mark>, single executable, &lt; 100 KB binary.</p></li>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Language</strong></td>
-<td><mark>C++17</mark> — modern features (<mark>auto</mark>, ranged-for, <mark>std::string_view</mark>)</td>
+<td><strong>Database</strong></td>
+<td><mark>MySQL</mark> 8.0+ with centralized staging table</td>
 </tr>
 <tr class="even">
-<td><strong>Data model</strong></td>
-<td><mark>struct State { … }</mark> stored in a <mark>std::vector<state></state></mark></td>
+<td><strong>ETL</strong></td>
+<td>Modular SQL scripts for cleaning, enrichment, modeling</td>
 </tr>
 <tr class="odd">
-<td><strong>Indexing</strong></td>
-<td>Pre-sorted by key, binary search via <mark>std::lower_bound</mark></td>
+<td><strong>Analysis</strong></td>
+<td><mark>Python</mark> (pandas, matplotlib, numpy) + <mark>R</mark> (planned)</td>
 </tr>
 <tr class="even">
-<td><strong>Parsing</strong></td>
-<td><mark>std::ifstream</mark> + <mark>getline</mark> + <mark>std::stringstream</mark></td>
+<td><strong>Import/Export</strong></td>
+<td>TablePlus for bulk imports, SQL <mark>SELECT … INTO OUTFILE</mark> for exports</td>
 </tr>
 <tr class="odd">
-<td><strong>Build</strong></td>
-<td><mark>g++ -O2 search.cpp -o search</mark> (VS Code tasks.json)</td>
-</tr>
-<tr class="even">
-<td><strong>UX</strong></td>
-<td>Command-line prompts, coloured output with ANSI codes</td>
+<td><strong>Dev tools</strong></td>
+<td>VS Code, Jupyter Notebook, TablePlus, Git &amp; GitHub</td>
 </tr>
 </tbody>
 </table>
 </div>
-<hr>
 </section>
-<section id="key-features" class="level2">
-<h2 class="anchored" data-anchor-id="key-features">♡ Key features</h2>
+<section id="project-structure" class="level2">
+<h2 class="anchored" data-anchor-id="project-structure">♡️ Project structure</h2>
 <div class="content-card">
-<ol type="1">
-<li><p><strong>Flexible queries</strong> — select any column (name, capital, region, year…)<br>
-and retrieve the row in under a millisecond.</p></li>
-<li><p><strong>Optimised search</strong> — vector sorted at start-up; look-ups use <mark>std::binary_search()</mark> → <mark>O(log n)</mark>.</p></li>
-<li><p><strong>Graceful fallback</strong> — invalid keys return suggestions<br>
-(<em>Did you mean “MA” ?</em>).</p></li>
-<li><p><strong>Scalable design</strong> — swap the CSV to 5 000 rows with zero code changes;<br>
-RAM grows linearly.</p></li>
-</ol>
+<pre><code>911Calls-ResearchProject/
+├── Data Import:Export Process/
+│   ├── Specialized Tables/
+│   │   ├── 911CallLocations.csv
+│   │   ├── mostCallTypesLocations.csv
+│   │   └── mostShootingLocations.csv
+│   ├── data_export_process.sql
+│   └── data_import_process.md
+├── Initial Attempts/
+│   └── initial_sqlite_attempt.sql
+├── MySQL/
+│   ├── 01_schema_definition.sql
+│   ├── 02_data_cleaning_and_enrichment.sql
+│   ├── 03_data_modeling.sql
+│   └── 04_analysis_queries.sql
+├── Python Visuals/
+│   ├── 911CallsAnalysis.ipynb
+│   └── Datasets/
+│       ├── 2022FiveYearEstimate.csv
+│       ├── 2023FiveYearEstimate.csv
+│       ├── 911CallLocations.csv
+│       ├── mostCallTypesLocations.csv
+│       └── mostShootingLocations.csv
+├── R/
+│   └── (future R scripts)
+└── README.md</code></pre>
 </div>
-<hr>
 </section>
-<section id="sample-session" class="level2">
-<h2 class="anchored" data-anchor-id="sample-session">♡ Sample session</h2>
+<section id="key-highlights" class="level2">
+<h2 class="anchored" data-anchor-id="key-highlights">♡ Key highlights</h2>
 <div class="content-card">
-<pre class="text"><code>$ ./search
-➜  Enter query type [state | capital | abbr | year]: state
-➜  Enter value: Michigan
-──────────────────────────────────────────────
-State:               Michigan (MI)
-Capital:             Lansing
-Statehood (year):    1837
-Region:              Midwest
-Area (sq mi):        96 716
-──────────────────────────────────────────────</code></pre>
+<ul>
+<li><strong>Centralized Data Hub:</strong> MySQL database consolidates 2M+ 911 calls and Census demographic data for reproducible analysis</li>
+<li><strong>Modular ETL Pipeline:</strong> Automated data cleaning, enrichment, and specialized table creation via SQL scripts</li>
+<li><strong>Multi-Format Analysis:</strong> Python notebooks for exploration + planned R visualizations for spatial analysis</li>
+<li><strong>Research-Driven:</strong> Focused on demand-side factors in hospital location planning using emergency call data as proxy</li>
+</ul>
 </div>
-<hr>
 </section>
-<section id="code-data" class="level2">
-<h2 class="anchored" data-anchor-id="code-data">♡ Code &amp; data</h2>
+<section id="current-progress" class="level2">
+<h2 class="anchored" data-anchor-id="current-progress">♡ Current progress</h2>
 <div class="content-card">
-<div class="js-hover-effect">
-<p><a href="https://github.com/raameena/Search-System" target="_blank">GitHub Repository</a></p>
-</div>
+<p><strong>Completed:</strong></p>
+<ul>
+<li><p>Research question and hypothesis formulation</p></li>
+<li><p>Literature review on hospital location factors</p></li>
+<li><p>Database architecture and data import pipeline</p></li>
+<li><p>Python analysis setup with Census data integration</p></li>
+</ul>
+<p><strong>Next Steps:</strong></p>
+<ul>
+<li><p>Data cleaning and validation</p></li>
+<li><p>Spatial analysis with hospital location mapping</p></li>
+<li><p>Statistical correlation testing</p></li>
+<li><p>Heatmap visualization of call density vs.&nbsp;hospital proximity</p></li>
+</ul>
 </div>
 
 
